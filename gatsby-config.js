@@ -19,12 +19,11 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Lobster`,
-            subsets: [`latin`],
+            family: `ABeeZee`,
           },
           {
-            family: `Montserrat`,
-            variants: [`400`, `400i`, `500`, `700`],
+            family: `Poppins`,
+            variants: [`400`, `700`],
           },
         ],
       },
