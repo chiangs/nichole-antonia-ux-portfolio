@@ -1,11 +1,16 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Nichole Antonia`,
+    description: `UX design portfolio of Nichole Antonia, Stavanger, Norway`,
+    type: `Website`,
+    author: `stephen.e.chiang@gmail.com`,
+    subject: `UX design, portfolio, blog, contact`,
+    baseUrl: `nichole-ux.design`,
+    logo: `/`,
+    imageAlt: `Nichole Antonia, UX designer`,
+    username: `@`,
+    siteUrl: `https://www.nichole-ux.design`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
