@@ -24,3 +24,5 @@ fields:
     min: 5
   label: Body
   description: Main content; the part of the copy that gets rendered on the site.
+pages:
+- general-copy/introduction.md
