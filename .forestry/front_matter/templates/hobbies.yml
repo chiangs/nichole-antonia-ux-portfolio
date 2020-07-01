@@ -7,6 +7,13 @@ fields:
   label: Publish
   description: Toggle to published when ready.
   default: false
+- name: title
+  type: text
+  config:
+    required: true
+    min: 5
+  label: Title
+  description: Title, name of the list
 - name: number_to_show
   type: number
   label: Number to show
