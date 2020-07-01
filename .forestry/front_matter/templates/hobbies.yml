@@ -1,4 +1,27 @@
 ---
 label: Hobbies
 hide_body: true
-fields: []
+fields:
+- name: publish
+  type: boolean
+  label: Publish
+  description: Toggle to published when ready.
+  default: false
+- name: number_to_show
+  type: number
+  label: Number to show
+  description: 'Enter the number of hobbies you want to show. <br><br>Fx: if you enter
+    4, then the first 4 hobbies will show.'
+  default: 0
+  required: true
+  config:
+    min: 1
+    max: 
+    step: 
+    required: true
+- name: hobbies_list
+  type: tag_list
+  default: []
+  label: Hobbies list
+  description: List separate by commas. List as many as you want here. Reorder them
+    as the number to show will only show that number of the top of the list.
