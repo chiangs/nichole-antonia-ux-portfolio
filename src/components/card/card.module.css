@@ -1,0 +1,8 @@
+.Card {
+  --color-bg: var(--green-300);
+}
+
+.Card {
+  background-color: var(--color-bg);
+  width: 100%;
+}

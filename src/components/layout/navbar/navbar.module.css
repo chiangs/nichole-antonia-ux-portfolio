@@ -1,0 +1,37 @@
+.Navbar {
+  --color-bg: var(--green-500);
+  --padding-navbar: var(--xxs) var(--xs);
+  --margin-links: var(--l);
+  --size-links: var(--l);
+  --font-links: var(--font-main);
+  --weight-links: var(--light);
+  --weight-links-active: var(--bold);
+}
+
+.Navbar {
+  background-color: var(--color-bg);
+  padding: var(--padding-navbar);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavbarList {
+}
+
+.NavbarLinks {
+  font-family: var(--font-links);
+  font-weight: var(--weight-links);
+  font-size: var(--size-links);
+  margin-left: var(--margin-links);
+  text-transform: capitalize;
+  text-decoration: none;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+.NavbarLinksActive {
+  font-weight: var(--weight-links-active);
+}

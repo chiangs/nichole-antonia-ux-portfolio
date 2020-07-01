@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const main = ({ view, children }) => {
+const Main = ({ view, children }) => {
   const childrenCloned = React.cloneElement(children, { view })
 
   return (
@@ -16,4 +16,4 @@ Main.propTypes = {
   children: PropTypes.any,
 }
 
-export default main
+export default Main

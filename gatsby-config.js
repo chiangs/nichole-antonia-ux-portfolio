@@ -23,7 +23,7 @@ module.exports = {
           },
           {
             family: `Poppins`,
-            variants: [`400`, `700`],
+            variants: [`300`, `400`, `600`],
           },
         ],
       },
@@ -32,8 +32,14 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/,
+          include: /assets/,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout/layout.js`),
       },
     },
   ],

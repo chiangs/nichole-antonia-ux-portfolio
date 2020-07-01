@@ -1,0 +1,130 @@
+@import "../../pages-css/global.css";
+
+html,
+body {
+  min-width: var(--min-width);
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--font-main);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+header,
+footer {
+  z-index: var(--top);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  border: 1px solid gray;
+}
+
+button {
+  border-radius: 0;
+  padding: 0.75em 1em;
+  background-color: transparent;
+}
+
+/* This is mainly used for JavaScript interaction.
+/ (When users click on something in a button, event.target 
+/ is the thing they clicked on, not the button. 
+/ This style makes it easier to work with click events if there are 
+/ HTML elements inside a button).
+*/
+button * {
+  pointer-events: none;
+}
+
+embed,
+iframe,
+img,
+object,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
