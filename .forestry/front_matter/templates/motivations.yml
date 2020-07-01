@@ -35,3 +35,5 @@ fields:
     labelField: 
   label: Skillbar
   description: Skillbar with 1 or 2 labels.
+pages:
+- skills/Motivations.md
