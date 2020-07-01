@@ -1,8 +1,11 @@
 .Navbar {
   --color-bg: var(--green-500);
-  --padding-navbar: var(--xxs) var(--xs);
-  --margin-links: var(--l);
-  --size-links: var(--l);
+  --padding-navbar-m: var(--xxs) var(--xs);
+  --padding-navbar-d: var(--xs) var(--l);
+  --margin-links-m: var(--l);
+  --margin-links-d: var(--l3);
+  --size-links-m: var(--l);
+  --size-links-d: var(--l1);
   --font-links: var(--font-main);
   --weight-links: var(--light);
   --weight-links-active: var(--bold);
@@ -10,7 +13,7 @@
 
 .Navbar {
   background-color: var(--color-bg);
-  padding: var(--padding-navbar);
+  padding: var(--padding-navbar-m);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -24,8 +27,8 @@
 .NavbarLinks {
   font-family: var(--font-links);
   font-weight: var(--weight-links);
-  font-size: var(--size-links);
-  margin-left: var(--margin-links);
+  font-size: var(--size-links-m);
+  margin-left: var(--margin-links-m);
   text-transform: capitalize;
   text-decoration: none;
   user-select: none;
@@ -34,4 +37,15 @@
 
 .NavbarLinksActive {
   font-weight: var(--weight-links-active);
+}
+
+@media (min-width: 768px) {
+  .Navbar {
+    padding: var(--padding-navbar-d);
+  }
+
+  .NavbarLinks {
+    font-size: var(--size-links-d);
+    margin-left: var(--margin-links-d);
+  }
 }
