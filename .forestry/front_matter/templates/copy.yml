@@ -14,14 +14,3 @@ fields:
     min: 2
   label: Title
   description: Title or identifier of purpose of copy.
-- name: body
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-    min: 5
-  label: Body
-  description: Actual copy text to render.
