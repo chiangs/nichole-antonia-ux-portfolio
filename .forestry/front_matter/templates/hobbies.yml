@@ -34,3 +34,4 @@ fields:
     as the number to show will only show that number of the top of the list.
 pages:
 - lists/hobbies.md
+- lists/works-with.md
