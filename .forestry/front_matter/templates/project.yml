@@ -35,3 +35,5 @@ fields:
     maxSize: 1
   description: This is the main photo to be used in previews and hero style sections.
   label: Cover photo
+pages:
+- projects/organic-ecommerce-website.md
