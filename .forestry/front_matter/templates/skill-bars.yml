@@ -1,4 +1,27 @@
 ---
 label: Skill-bars
 hide_body: true
-fields: []
+fields:
+- name: label-1
+  type: text
+  config:
+    required: true
+    min: 2
+  description: Label
+  label: Label 1
+- name: label-2
+  type: text
+  config:
+    required: false
+  label: Label 2
+- name: level
+  type: number
+  label: Level
+  description: From 1- 10
+  default: 0
+  required: true
+  config:
+    min: 0
+    max: 10
+    step: 1
+    required: true
