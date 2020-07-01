@@ -1,0 +1,27 @@
+---
+label: copy
+hide_body: false
+fields:
+- name: published
+  type: boolean
+  label: Published
+  description: Toggle to publish or un-publish. Default is un-published for drafting.
+  default: false
+- name: title
+  type: text
+  config:
+    required: true
+    min: 2
+  label: Title
+  description: Title or identifier of purpose of copy.
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+    min: 5
+  label: Body
+  description: Actual copy text to render.
