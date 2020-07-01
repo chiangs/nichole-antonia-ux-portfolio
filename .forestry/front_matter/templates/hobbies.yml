@@ -1,5 +1,5 @@
 ---
-label: Hobbies
+label: List
 hide_body: true
 fields:
 - name: publish
@@ -19,9 +19,9 @@ fields:
     max: 
     step: 
     required: true
-- name: hobbies_list
+- name: list
   type: tag_list
   default: []
-  label: Hobbies list
+  label: List
   description: List separate by commas. List as many as you want here. Reorder them
     as the number to show will only show that number of the top of the list.
