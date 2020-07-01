@@ -5,6 +5,13 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: lists
+  label: Lists
+  create: all
+  match: "**/*"
+  templates:
+  - hobbies
+- type: directory
   path: general-copy
   label: General Copy
   create: all
@@ -12,10 +19,12 @@ sections:
   templates:
   - copy
 - type: directory
-  path: ''
+  path: projects
   label: Projects
   create: all
   match: "**/*"
+  templates:
+  - project
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
