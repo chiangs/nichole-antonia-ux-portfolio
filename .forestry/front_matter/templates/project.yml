@@ -1,4 +1,37 @@
 ---
 label: Project
 hide_body: false
-fields: []
+fields:
+- name: publish
+  type: boolean
+  label: Publish
+  description: Default is unpublished for drafting purposes. Toggle this to signal
+    that it is ready and available for rendering on the site.
+- name: title
+  type: text
+  config:
+    required: true
+    min: 5
+  label: Title
+  description: Title or name of project.
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: Tags, keywords on the tools. Separate by commas when entering. Try
+    to keep to 4 or less.
+- name: prototype_link
+  type: text
+  config:
+    required: true
+    min: 5
+  label: Prototype link
+  description: This will also be the what's known as the slug or the unique part of
+    the URL. <br><br>The format should be the title in all lowercase and words split
+    with '-' in between. Fx:<br><br>My project = my-project
+- name: hero_image
+  type: file
+  config:
+    maxSize: 1
+  description: This is the main photo to be used in previews and hero style sections.
+  label: Cover photo
