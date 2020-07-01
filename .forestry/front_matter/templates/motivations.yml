@@ -37,3 +37,4 @@ fields:
   description: Skillbar with 1 or 2 labels.
 pages:
 - skills/Motivations.md
+- skills/Personality.md
