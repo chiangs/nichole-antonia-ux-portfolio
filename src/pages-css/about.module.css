@@ -1,0 +1,50 @@
+.About {
+  --padding-layout-m: var(--l);
+  --padding-card-m: var(--xs);
+  --margin-section-m: var(--xs) 0;
+  --margin-copy-intro-m: 0 0 0 var(--m);
+}
+
+.About {
+  padding: var(--padding-layout-m);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.About__Section {
+  margin: var(--margin-section-m);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Copy__Intro {
+  margin: var(--margin-copy-intro-m);
+}
+
+.Card__Container {
+  padding: var(--padding-card-m);
+}
+
+.List {
+  width: 100%;
+}
+
+.List__Headings,
+.List .Card__Container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.List__Headings *,
+.List .Card__Container * {
+  flex: 1;
+}
