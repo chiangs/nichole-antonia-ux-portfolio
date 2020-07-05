@@ -12,7 +12,7 @@ const AboutPage = ({ view }) => {
   const tempCopy =
     "I have spend the last 5 years dedicating myself to the care of premature and sick infants in the NICU. This work has helped me develop a great sense of empathy."
   const tempCopy2 =
-    "I am working to make user-friendly and desireable start-to-end solutions that makes a difference for both the end user and the costumer. "
+    "I am working to make user-friendly and desireable start-to-end solutions that makes a difference for both the end user and the costumer."
   const actionPicDimensions = {
     height: 220,
     width: 142,
