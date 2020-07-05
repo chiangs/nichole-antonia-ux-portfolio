@@ -1,4 +1,5 @@
 .Navbar {
+  --color-links: var(--purple-500);
   --color-bg: var(--green-500);
   --padding-navbar-m: var(--xxs) var(--xs);
   --padding-navbar-d: var(--xs) var(--l);
@@ -25,6 +26,7 @@
 }
 
 .NavbarLinks {
+  color: var(--color-links);
   font-family: var(--font-links);
   font-weight: var(--weight-links);
   font-size: var(--size-links-m);

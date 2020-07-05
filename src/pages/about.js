@@ -63,7 +63,7 @@ const AboutPage = ({ view }) => {
               dimensions={actionPicDimensions2}
             />
           </section>
-          <section className={css.About__Section}>
+          <section className={css.About__Section} className="wrap">
             <div className={css.List__Headings}>
               <p>Hobbies</p>
               <p>Works with</p>

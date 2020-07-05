@@ -75,6 +75,10 @@ p {
   font-size: var(--base-size);
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 @media (min-width: 768px) {
   :root {
     --type-scale: 1.2;
