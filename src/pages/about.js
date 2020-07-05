@@ -14,7 +14,7 @@ const AboutPage = ({ view }) => {
   const tempCopy2 =
     "I am working to make user-friendly and desireable start-to-end solutions that makes a difference for both the end user and the costumer."
   const actionPicDimensions = {
-    height: 220,
+    height: 250,
     width: 142,
   }
   const actionPicDimensions2 = {

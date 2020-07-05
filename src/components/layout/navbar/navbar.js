@@ -8,11 +8,11 @@ const Navbar = ({ view }) => {
   const routes = [
     {
       label: "Work",
-      path: "/work",
+      path: "/work/",
     },
     {
       label: "About",
-      path: "/about",
+      path: "/about/",
     },
   ]
 
