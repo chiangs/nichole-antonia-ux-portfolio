@@ -20,15 +20,31 @@ fields:
   label: Tags
   description: Tags, keywords on the tools. Separate by commas when entering. Try
     to keep to 4 or less.
-- name: prototype_link
+- name: page_link
   type: text
   config:
     required: true
     min: 5
-  label: Prototype link
+  label: Page link
   description: This will also be the what's known as the slug or the unique part of
     the URL. <br><br>The format should be the title in all lowercase and words split
     with '-' in between. Fx:<br><br>My project = my-project
+- name: prototype_link
+  type: text
+  config:
+    required: false
+  label: Prototype link
+  description: Full link to prototype.
+- name: duration
+  type: number
+  label: Duration
+  description: Duration of project in number of weeks
+  default: 1
+  required: true
+  config:
+    min: 
+    max: 
+    step: 1
 - name: hero_image
   type: file
   config:
