@@ -1,0 +1,9 @@
+.Brand {
+  --color: var(--purple-500);
+  --size-m: var(--h4);
+}
+
+.Brand * {
+  color: var(--color);
+  font-size: var(--size-m);
+}

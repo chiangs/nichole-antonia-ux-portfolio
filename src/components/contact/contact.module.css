@@ -1,0 +1,30 @@
+.Contact {
+  --size-font-m: var(--small);
+  --margin-info-m: var(--xxs) 0;
+  --color: var(--purple-500);
+}
+
+.Contact {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Contact__Info {
+  text-align: center;
+}
+
+.Contact__Info a {
+  font-size: var(--size-font-m);
+  margin: var(--margin-info-m);
+  color: var(--color);
+  text-decoration: none;
+  user-select: all;
+  -moz-user-select: all;
+}
+
+.Contact__Info a:hover {
+  font-weight: bold;
+}

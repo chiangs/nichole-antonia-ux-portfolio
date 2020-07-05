@@ -6,10 +6,12 @@ module.exports = {
     author: `stephen.e.chiang@gmail.com`,
     subject: `UX design, portfolio, blog, contact`,
     baseUrl: `nichole-ux.design`,
-    logo: `/`,
+    logo: `/logo.svg`,
     imageAlt: `Nichole Antonia, UX designer`,
     username: `@`,
     siteUrl: `https://www.nichole-ux.design`,
+    phone: `+47 968 49 108`,
+    email: `antonia.nichole.ux@gmail.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

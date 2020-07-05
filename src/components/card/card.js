@@ -6,7 +6,7 @@ const Card = ({ children }) => {
   return <section className={css.Card}>{children}</section>
 }
 
-TextBox.propTypes = {
+Card.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
