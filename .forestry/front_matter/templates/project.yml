@@ -51,5 +51,11 @@ fields:
     maxSize: 1
   description: This is the main photo to be used in previews and hero style sections.
   label: Cover photo
+- name: gallery
+  type: image_gallery
+  config: {}
+  label: Gallery
+  description: Load photos here that will be used. Then insert them by referencing
+    the gallery.
 pages:
 - projects/organic-ecommerce-website.md
