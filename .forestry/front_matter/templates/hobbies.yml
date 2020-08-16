@@ -33,5 +33,6 @@ fields:
   description: List separate by commas. List as many as you want here. Reorder them
     as the number to show will only show that number of the top of the list.
 pages:
+- lists/contact-info.md
 - lists/hobbies.md
 - lists/works-with.md
