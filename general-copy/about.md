@@ -8,6 +8,6 @@ body: |-
 
   (after photo)
 
-  I am working to make user-friendly and desirable start-to-end solutions that makes a difference for both the end user and the costumer.
+  I am working to make user-friendly and desirable start-to-end solutions that makes a difference for both the costumer and the end user.
 
 ---
