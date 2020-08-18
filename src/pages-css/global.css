@@ -83,4 +83,20 @@ p {
   :root {
     --type-scale: 1.2;
   }
+
+  main {
+    padding: 0 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 0 200px;
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    padding: 0 400px;
+  }
 }
