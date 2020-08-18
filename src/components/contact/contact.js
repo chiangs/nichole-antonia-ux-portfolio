@@ -2,6 +2,7 @@ import React from "react"
 import css from "./contact.module.css"
 import LinkedIn from "../../assets/linkedin.svg"
 import Email from "../../assets/email.svg"
+import Phone from "../../assets/phone.svg"
 
 const contact = props => {
   const tempContactCopyPhone = `+47 968 49 108`
@@ -17,6 +18,7 @@ const contact = props => {
         </li>
 
         <li className={css.Info__Item}>
+          <Phone />
           <a href={`tel:${tempContactCopyPhone}`}>{tempContactCopyPhone}</a>
         </li>
 
