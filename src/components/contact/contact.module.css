@@ -1,7 +1,8 @@
 .Contact {
   --size-font-m: var(--small);
-  --margin-info-m: var(--xxs) 0;
   --color: var(--purple-500);
+  --margin-li: var(--xs) 0;
+  --margin-a: 0 var(--s);
 }
 
 .Contact {
@@ -13,18 +14,39 @@
 }
 
 .Contact__Info {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.Contact__Info a {
+.Info__Item {
+  margin: var(--margin-li);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.Info__Item a {
+  margin: var(--margin-a);
   font-size: var(--size-font-m);
-  margin: var(--margin-info-m);
   color: var(--color);
   text-decoration: none;
   user-select: all;
   -moz-user-select: all;
 }
 
-.Contact__Info a:hover {
+.Info__Item a:hover {
   font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .Contact__Info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
