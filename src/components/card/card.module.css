@@ -1,8 +1,10 @@
 .Card {
   --color-bg: var(--green-300);
+  --radius: var(--radius-soft);
 }
 
 .Card {
   background-color: var(--color-bg);
+  border-radius: var(--radius);
   width: 100%;
 }

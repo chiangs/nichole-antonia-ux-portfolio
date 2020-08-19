@@ -14,9 +14,11 @@ const IndexPage = ({ view }) => {
   const tempTestAuthor = "Jacques Louw and Candice Kruger"
   const tempTestAuthor2 = "UXD teachers, Noroff"
   const profilePicDimensions = {
-    height: 209,
-    width: 154,
+    height: 300,
+    width: 300,
   }
+  const brandStyles = [css.Index__Section, css.Brand]
+  const picStyles = [css.Index__Section, css.NoFlex]
   const { title } = useSiteMetadata()
   const [mounted, setMounted] = useState(false)
 
@@ -34,12 +36,12 @@ const IndexPage = ({ view }) => {
     ({ item, key, props }) =>
       item && (
         <a.article className={css.Index} key={key} style={props}>
-          <section className={css.Index__Section}>
+          <section className={brandStyles.join("")}>
             <Brand>
               <h1>{title}</h1>
             </Brand>
           </section>
-          <section className={css.Index__Section}>
+          <section className={picStyles.join("")}>
             <Image
               src={profilePicSrc}
               alt={profilePicAlt}

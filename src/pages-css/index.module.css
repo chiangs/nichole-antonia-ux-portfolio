@@ -1,8 +1,8 @@
 .Index {
-  --padding-layout-m: var(--l);
+  --padding-layout-m: var(--l3) var(--l);
   --padding-card-m: var(--xs);
-  --margin-section-m: var(--xs) 0;
-  --margin-copy-intro-m: 0 0 0 var(--m);
+  --margin-section-m: var(--l2) 0 var(--l5) 0;
+  --margin-copy-intro-m: var(--l4) 0 0 var(--m);
   --margin-testimonial-m: 0 0 var(--m) 0;
   --size-author-m: var(--small);
 }
@@ -19,9 +19,13 @@
   margin: var(--margin-section-m);
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.Index__Section.Brand {
+  justify-self: flex-start;
 }
 
 .Card__Container {
@@ -43,4 +47,10 @@
 .Testimonial__Author {
   font-size: var(--size-author-m);
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .Index__Section {
+    flex-direction: row;
+  }
 }
