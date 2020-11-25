@@ -27,7 +27,7 @@ fields:
 - name: author
   type: text
   config:
-    required: true
+    required: false
     min: 5
   label: Author
   description: Author names
