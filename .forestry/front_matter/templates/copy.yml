@@ -28,7 +28,7 @@ fields:
   type: text
   config:
     required: false
-    min: 5
+    min: 
   label: Author
   description: Author names
 - name: author_title_and_organization
