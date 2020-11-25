@@ -24,6 +24,18 @@ fields:
     min: 5
   label: Body
   description: Main content; the part of the copy that gets rendered on the site.
+- name: author
+  type: text
+  config:
+    required: true
+    min: 5
+  label: Author
+  description: Author names
+- name: author_title_and_organization
+  type: text
+  config:
+    required: false
+  label: Author title and organization
 pages:
 - general-copy/about.md
 - general-copy/introduction.md
