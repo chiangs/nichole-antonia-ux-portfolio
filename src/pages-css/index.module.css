@@ -42,6 +42,7 @@
 
 .Testimonial {
   margin: var(--margin-testimonial-m);
+  font-style: italic;
 }
 
 .Testimonial__Author {

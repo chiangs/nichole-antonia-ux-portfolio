@@ -1,5 +1,5 @@
 .Contact {
-  --size-font-m: var(--small);
+  --size-font-m: var(--h6);
   --color: var(--purple-500);
   --margin-li: var(--xs) 0;
   --margin-a: 0 var(--s);

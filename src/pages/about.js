@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 import css from "../pages-css/about.module.css"
 import { Card, Image, Contact } from "../components"
+import { useAbout, useAbout2 } from "../hooks"
 
 const AboutPage = ({ view }) => {
   const actionPic = "/action-001.jpg"
@@ -9,10 +10,8 @@ const AboutPage = ({ view }) => {
   const actionPicAlt = "Nichole Antonia designing prototype at table"
   const actionPicAlt2 =
     "Nichole Antonia designing prototype at table shot from above"
-  const tempCopy =
-    "I have spend the last 5 years dedicating myself to the care of premature and sick infants in the NICU. This work has helped me develop a great sense of empathy."
-  const tempCopy2 =
-    "I am working to make user-friendly and desireable start-to-end solutions that makes a difference for both the end user and the costumer."
+  const aboutCopy = useAbout()
+  const about2Copy = useAbout2()
   const actionPicDimensions = {
     height: 250,
     width: 142,
@@ -38,17 +37,21 @@ const AboutPage = ({ view }) => {
     ({ item, key, props }) =>
       item && (
         <a.article className={css.About}>
+          <h1 className={css.About__Title}>
+            UX Designer with a background in Healthcare
+          </h1>
+
           <section className={css.About__Section}>
+            <p className={css.Copy__Intro}>{aboutCopy}</p>
             <Image
+              className={css.About__Image}
               src={actionPic}
               alt={actionPicAlt}
               dimensions={actionPicDimensions}
             />
-            <p className={css.Copy__Intro}>{tempCopy}</p>
+            <p>{about2Copy}</p>
           </section>
-          <section className={css.About__Section}>
-            <p>{tempCopy2}</p>
-          </section>
+
           <section className={css.About__Section}>
             <Card>
               <div className={css.Card__Container}>

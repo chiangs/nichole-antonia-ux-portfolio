@@ -54,7 +54,7 @@ const IndexPage = ({ view }) => {
                 </div>
                 <blockquote>
                   <p className={css.Testimonial}>{testimonial.body}</p>
-                  <section>
+                  <section className={css.Testimonial__Author}>
                     <p>{testimonial.author}</p>
                     <p>{testimonial.author_title_and_organization}</p>
                   </section>

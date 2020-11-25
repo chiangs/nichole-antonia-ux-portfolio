@@ -1,7 +1,7 @@
 .Navbar {
   --color-links: var(--purple-500);
   --color-bg: var(--green-500);
-  --padding-navbar-m: var(--xxs) var(--xs);
+  --padding-navbar-m: var(--xxs) var(--s);
   --padding-navbar-d: var(--xs) var(--l);
   --margin-links-m: var(--l);
   --margin-links-d: var(--l3);
