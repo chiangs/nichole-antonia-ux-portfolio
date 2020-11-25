@@ -2,17 +2,14 @@ import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 import css from "../pages-css/index.module.css"
 import { Brand, Image, Card, Contact } from "../components"
-import { useSiteMetadata, useIntro } from "../hooks"
+import { useSiteMetadata, useIntro, useTestimonial } from "../hooks"
 import Quote from "../assets/quote-close.svg"
 
 const IndexPage = ({ view }) => {
   const profilePicSrc = "/profile.jpg"
   const profilePicAlt = "Nichole Antonia profile standing"
   const introCopy = useIntro()
-  const tempTestimonial =
-    "...Nichole has shown great promise and diligence throughout the UXD programme thus far, and we cannot wait to see what she has to display and deliver during the course of the programme. She goes above and beyond from what is expected of her on a daily basis..."
-  const tempTestAuthor = "Jacques Louw and Candice Kruger"
-  const tempTestAuthor2 = "UXD teachers, Noroff"
+  const testimonial = useTestimonial()
   const profilePicDimensions = {
     height: 300,
     width: 300,
@@ -56,9 +53,11 @@ const IndexPage = ({ view }) => {
                   <Quote />
                 </div>
                 <blockquote>
-                  <p className={css.Testimonial}>{tempTestimonial}</p>
-                  <p className={css.Testimonial__Author}>{tempTestAuthor}</p>
-                  <p className={css.Testimonial__Author}> {tempTestAuthor2}</p>
+                  <p className={css.Testimonial}>{testimonial.body}</p>
+                  <section>
+                    <p>{testimonial.author}</p>
+                    <p>{testimonial.author_title_and_organization}</p>
+                  </section>
                 </blockquote>
               </div>
             </Card>

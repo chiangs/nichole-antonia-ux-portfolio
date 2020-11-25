@@ -63,7 +63,7 @@ const AboutPage = ({ view }) => {
               dimensions={actionPicDimensions2}
             />
           </section>
-          <section className={css.About__Section} className="wrap">
+          <section className={["wrap", css.About__Section].join(" ")}>
             <div className={css.List__Headings}>
               <p>Hobbies</p>
               <p>Works with</p>

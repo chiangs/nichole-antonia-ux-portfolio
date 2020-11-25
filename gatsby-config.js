@@ -17,6 +17,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -73,20 +74,6 @@ module.exports = {
               target: "_blank",
               rel: "nofollow noopener",
             },
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `ABeeZee`,
-          },
-          {
-            family: `Poppins`,
-            variants: [`300`, `400`, `600`],
           },
         ],
       },

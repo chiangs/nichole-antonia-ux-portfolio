@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-const useTermsAnalytics = () => {
+const useIntro = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -19,4 +19,4 @@ const useTermsAnalytics = () => {
   return data.allMarkdownRemark.nodes[0].frontmatter.body
 }
 
-export default useTermsAnalytics
+export default useIntro
