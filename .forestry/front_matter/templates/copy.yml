@@ -37,6 +37,7 @@ fields:
     required: false
   label: Author title and organization
 pages:
+- general-copy/about-2.md
 - general-copy/about.md
 - general-copy/introduction.md
 - general-copy/project-link-on-landing-page.md
