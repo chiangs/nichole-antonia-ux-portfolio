@@ -1,12 +1,15 @@
 .About {
   --color-title: var(--purple-500);
   --size-title-m: var(--h4);
+  --size-keywords: var(--small);
   --padding-layout-m: var(--l);
   --padding-card-m: var(--xs);
   --margin-section-m: var(--l) 0;
   --margin-copy-intro-m: 0 0 0 var(--m);
   --margin-image: var(--l3) 0;
   --margin-title: 0 0 var(--m) 0;
+  --margin-keywords-col: 0 0 0 var(--s);
+  --margin-keywords-row: var(--s) 0;
   --border-radius-img: var(--radius-soft);
 }
 
@@ -46,10 +49,6 @@
   margin: var(--margin-copy-intro-m);
 }
 
-.Card__Container {
-  padding: var(--padding-card-m);
-}
-
 .List {
   width: 100%;
 }
@@ -61,9 +60,21 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding: var(--padding-card-m);
 }
 
 .List__Headings *,
 .List .Card__Container * {
   flex: 1;
+}
+
+.List__Headings > *:not(:first-child),
+.List .Card__Container > *:not(:first-child) {
+  margin: var(--margin-keywords-col);
+}
+
+.List__Headings li,
+.List .Card__Container li {
+  font-size: var(--size-keywords);
+  margin: var(--margin-keywords-row);
 }

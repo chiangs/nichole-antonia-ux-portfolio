@@ -3,6 +3,7 @@ import { useTransition, animated as a } from "react-spring"
 import css from "../pages-css/about.module.css"
 import { Card, Image, Contact } from "../components"
 import { useAbout, useAbout2 } from "../hooks"
+import { SkillBar } from "../components/skill-bar/skill-bar"
 
 const AboutPage = ({ view }) => {
   const actionPic = "/action-001.jpg"
@@ -27,6 +28,9 @@ const AboutPage = ({ view }) => {
     setMounted(true)
   }, [])
 
+  // TODO: Pull keywords from CMS
+  // TODO: Pull skills from CMS
+
   const transitions = useTransition(mounted, null, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
@@ -40,7 +44,7 @@ const AboutPage = ({ view }) => {
           <h1 className={css.About__Title}>
             UX Designer with a background in Healthcare
           </h1>
-
+          {/* Intro */}
           <section className={css.About__Section}>
             <p className={css.Copy__Intro}>{aboutCopy}</p>
             <Image
@@ -66,6 +70,13 @@ const AboutPage = ({ view }) => {
               dimensions={actionPicDimensions2}
             />
           </section>
+          {/* Skills */}
+          <section className={css.About__Section}>
+            Skills here
+            <SkillBar type={"bar"} value={5} label1={""} />
+          </section>
+
+          {/* Keywords */}
           <section className={["wrap", css.About__Section].join(" ")}>
             <div className={css.List__Headings}>
               <p>Hobbies</p>

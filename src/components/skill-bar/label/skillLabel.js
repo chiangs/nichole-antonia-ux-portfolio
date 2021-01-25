@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Label = ({ text }) => {
+const SkillLabel = ({ text }) => {
   return <div></div>
 }
 
-Label.propTypes = {
+SkillLabel.propTypes = {
   text: PropTypes.string,
 }
 
-export default Label
+export default SkillLabel
