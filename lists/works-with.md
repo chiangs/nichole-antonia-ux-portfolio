@@ -5,6 +5,7 @@ list:
 - Adobe XD
 - Forestry CMS
 - Notion
+- Preely
 publish: true
 title: Works with
 

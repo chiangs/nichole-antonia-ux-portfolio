@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 import css from "../pages-css/about.module.css"
 import { Card, Image, Contact, SkillBar } from "../components"
-import { useAbout, useAbout2, useHobbies, usePersonality } from "../hooks"
+import {
+  useAbout,
+  useAbout2,
+  useHobbies,
+  usePersonality,
+  useWorksWith,
+} from "../hooks"
 
 const AboutPage = ({ view }) => {
   // Content
@@ -14,6 +20,7 @@ const AboutPage = ({ view }) => {
   const aboutCopy = useAbout()
   const about2Copy = useAbout2()
   const hobbies = useHobbies()
+  const worksWith = useWorksWith()
   const personality = usePersonality()
 
   // Dims
@@ -34,6 +41,9 @@ const AboutPage = ({ view }) => {
 
   // TODO: Pull keywords from CMS
   // TODO: Pull skills from CMS
+
+  const hobbyListItems = hobbies.map(h => <li>{h}</li>)
+  const worksWithItems = worksWith.map(i => <li>{i}</li>)
 
   const transitions = useTransition(mounted, null, {
     from: { opacity: 0 },
@@ -89,14 +99,8 @@ const AboutPage = ({ view }) => {
             <div className={css.List}>
               <Card>
                 <div className={css.Card__Container}>
-                  <ul>
-                    <li>Yoga and meditation</li>
-                    <li>Crafts</li>
-                  </ul>
-                  <ul>
-                    <li>Figma</li>
-                    <li>Adobe XD</li>
-                  </ul>
+                  <ul>{hobbyListItems}</ul>
+                  <ul>{worksWithItems}</ul>
                 </div>
               </Card>
             </div>

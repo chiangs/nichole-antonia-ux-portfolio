@@ -59,8 +59,9 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   padding: var(--padding-card-m);
+  text-transform: capitalize;
 }
 
 .List__Headings *,
