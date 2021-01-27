@@ -2,7 +2,7 @@
 skillbar:
 - label_1: Growth
   label_2: ''
-  level: 9
+  level: 8
 - label_1: Achievement
   label_2: ''
   level: 7
