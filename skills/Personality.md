@@ -1,8 +1,5 @@
 ---
 skillbar:
-- label_1: Test
-  label_2: Test 2
-  level: 1
 - label_2: Extrovert
   level: 7
   label_1: Introvert
