@@ -1,11 +1,11 @@
 import React from "react"
 import Bar from "./bar/bar"
-import SkillLabel from "./label/skillLabel"
+import Label from "./label/label"
 import css from "./skill-bar.module.css"
 
 const SkillBar = ({ type, value, label1, label2 }) => {
-  const skillLabel1 = <SkillLabel>Introvert</SkillLabel>
-  const skillLabel2 = <SkillLabel>Introvert</SkillLabel>
+  const skillLabel1 = <Label>Introvert</Label>
+  const skillLabel2 = <Label>Introvert</Label>
   const skillBar = type === "bar" ? <Bar value={value} /> : null
 
   return (

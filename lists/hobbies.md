@@ -6,7 +6,7 @@ list:
 - hiking
 - reading
 - ultimate frisbee
-publish: false
+publish: true
 title: Hobbies
 
 ---

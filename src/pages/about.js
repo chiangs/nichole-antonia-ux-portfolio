@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 import css from "../pages-css/about.module.css"
-import { Card, Image, Contact } from "../components"
-import { useAbout, useAbout2 } from "../hooks"
-import { SkillBar } from "../components/skill-bar/skill-bar"
+import { Card, Image, Contact, SkillBar } from "../components"
+import { useAbout, useAbout2, useHobbies, usePersonality } from "../hooks"
 
 const AboutPage = ({ view }) => {
+  // Content
   const actionPic = "/action-001.jpg"
   const actionPic2 = "/action-002.jpg"
   const actionPicAlt = "Nichole Antonia designing prototype at table"
@@ -13,6 +13,10 @@ const AboutPage = ({ view }) => {
     "Nichole Antonia designing prototype at table shot from above"
   const aboutCopy = useAbout()
   const about2Copy = useAbout2()
+  const hobbies = useHobbies()
+  const personality = usePersonality()
+
+  // Dims
   const actionPicDimensions = {
     height: 250,
     width: 142,
@@ -71,10 +75,10 @@ const AboutPage = ({ view }) => {
             />
           </section>
           {/* Skills */}
-          <section className={css.About__Section}>
+          {/* <section className={css.About__Section}>
             Skills here
             <SkillBar type={"bar"} value={5} label1={""} />
-          </section>
+          </section> */}
 
           {/* Keywords */}
           <section className={["wrap", css.About__Section].join(" ")}>

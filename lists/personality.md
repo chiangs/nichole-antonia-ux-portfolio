@@ -5,7 +5,7 @@ list:
 - Thinking vs feeling (5)
 - Sensing vs intuition (7)
 - Judging vs perceiving (8)
-publish: false
+publish: true
 title: Personality
 
 ---
