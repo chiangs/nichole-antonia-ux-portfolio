@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-const usePersonality = () => {
+const useMotivations = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        filter: { frontmatter: { title: { regex: "/Personality/" } } }
+        filter: { frontmatter: { title: { regex: "/Motivations/" } } }
       ) {
         nodes {
           frontmatter {
@@ -23,4 +23,4 @@ const usePersonality = () => {
   return data.allMarkdownRemark.nodes[0].frontmatter
 }
 
-export default usePersonality
+export default useMotivations

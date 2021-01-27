@@ -1,4 +1,5 @@
 ---
+title: "Personality"
 skillbar:
 - label_2: Extrovert
   level: 8

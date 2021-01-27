@@ -8,6 +8,7 @@ const useHobbies = () => {
       ) {
         nodes {
           frontmatter {
+            title
             number_to_show
             list
           }
@@ -16,7 +17,7 @@ const useHobbies = () => {
     }
   `)
 
-  return data.allMarkdownRemark.nodes[0].frontmatter.list
+  return data.allMarkdownRemark.nodes[0].frontmatter
 }
 
 export default useHobbies

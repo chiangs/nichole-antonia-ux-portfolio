@@ -6,8 +6,9 @@ import {
   useAbout,
   useAbout2,
   useHobbies,
-  usePersonality,
   useWorksWith,
+  usePersonality,
+  useMotivations,
 } from "../hooks"
 
 const AboutPage = ({ view }) => {
@@ -22,11 +23,12 @@ const AboutPage = ({ view }) => {
   const hobbies = useHobbies()
   const worksWith = useWorksWith()
   const personality = usePersonality()
+  const motivations = useMotivations()
 
   // Dims
   const actionPicDimensions = {
-    height: 250,
-    width: 142,
+    height: 400,
+    width: 180,
   }
   const actionPicDimensions2 = {
     height: 160,
@@ -39,17 +41,14 @@ const AboutPage = ({ view }) => {
     setMounted(true)
   }, [])
 
-  // TODO: Pull keywords from CMS
-  // TODO: Pull skills from CMS
-
-  const hobbyListItems = hobbies.map(h => <li>{h}</li>)
-  const worksWithItems = worksWith.map(i => <li>{i}</li>)
-
   const transitions = useTransition(mounted, null, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
   })
+
+  const hobbyListItems = hobbies.list.map(h => <li>{h}</li>)
+  const worksWithItems = worksWith.list.map(i => <li>{i}</li>)
 
   const content = transitions.map(
     ({ item, key, props }) =>
@@ -85,16 +84,21 @@ const AboutPage = ({ view }) => {
             />
           </section>
           {/* Skills */}
-          {/* <section className={css.About__Section}>
-            Skills here
-            <SkillBar type={"bar"} value={5} label1={""} />
-          </section> */}
+          <section className={["wrap", css.About__Section].join(" ")}>
+            <div className={css.List__Headings}>
+              <p>{motivations.title}</p>
+              <p>{personality.title}</p>
+            </div>
+            <div className={css.List}>
+              {/* <SkillBar type={"bar"} value={5} label1={""} /> */}
+            </div>
+          </section>
 
           {/* Keywords */}
           <section className={["wrap", css.About__Section].join(" ")}>
             <div className={css.List__Headings}>
-              <p>Hobbies</p>
-              <p>Works with</p>
+              <p>{hobbies.title}</p>
+              <p>{worksWith.title}</p>
             </div>
             <div className={css.List}>
               <Card>

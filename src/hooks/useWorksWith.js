@@ -8,6 +8,7 @@ const useWorksWith = () => {
       ) {
         nodes {
           frontmatter {
+            title
             number_to_show
             list
           }
@@ -16,7 +17,7 @@ const useWorksWith = () => {
     }
   `)
 
-  return data.allMarkdownRemark.nodes[0].frontmatter.list
+  return data.allMarkdownRemark.nodes[0].frontmatter
 }
 
 export default useWorksWith
