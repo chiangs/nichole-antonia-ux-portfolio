@@ -1,7 +1,7 @@
 ---
 skillbar:
 - label_2: Extrovert
-  level: 7
+  level: 8
   label_1: Introvert
 - label_1: Thinking
   label_2: Feeling
