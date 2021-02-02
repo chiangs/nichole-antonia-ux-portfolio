@@ -69,7 +69,7 @@ const AboutPage = ({ view }) => {
         type={"point"}
         value={s.level}
         label1={s.label_1}
-        label_2={s.label_2}
+        label2={s.label_2}
       />
     </li>
   ))
