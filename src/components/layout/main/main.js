@@ -5,7 +5,7 @@ const Main = ({ view, children }) => {
   const childrenCloned = React.cloneElement(children, { view })
 
   return (
-    <main id="main" class="main" data-view={view} aria-atomic="true">
+    <main id="main" className="main" data-view={view} aria-atomic="true">
       {childrenCloned}
     </main>
   )

@@ -47,13 +47,37 @@ const AboutPage = ({ view }) => {
     leave: { opacity: 0 },
   })
 
-  const hobbyListItems = hobbies.list.map(h => <li>{h}</li>)
-  const worksWithItems = worksWith.list.map(i => <li>{i}</li>)
+  const hobbyListItems = hobbies.list.map((h, i) => (
+    <li key={`hobby${i}`}>{h}</li>
+  ))
+  const worksWithItems = worksWith.list.map((w, i) => (
+    <li key={`work${i}`}>{w}</li>
+  ))
+  const motivationItems = motivations.skillbar.map(s => (
+    <li key={s.label_1} className="skillbar">
+      <SkillBar
+        type={"fill"}
+        value={s.level}
+        label1={s.label_1}
+        label2={s.label_2}
+      />
+    </li>
+  ))
+  const personalityItems = personality.skillbar.map(s => (
+    <li key={s.label_1} className="skillbar">
+      <SkillBar
+        type={"point"}
+        value={s.level}
+        label1={s.label_1}
+        label_2={s.label2}
+      />
+    </li>
+  ))
 
   const content = transitions.map(
     ({ item, key, props }) =>
       item && (
-        <a.article className={css.About}>
+        <a.article key={key} className={css.About}>
           <h1 className={css.About__Title}>
             UX Designer with a background in Healthcare
           </h1>
@@ -89,8 +113,9 @@ const AboutPage = ({ view }) => {
               <p>{motivations.title}</p>
               <p>{personality.title}</p>
             </div>
-            <div className={css.List}>
-              {/* <SkillBar type={"bar"} value={5} label1={""} /> */}
+            <div className={css.List__Skills}>
+              <ul>{motivationItems}</ul>
+              <ul>{personalityItems}</ul>
             </div>
           </section>
 

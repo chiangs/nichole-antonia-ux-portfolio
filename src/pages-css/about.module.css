@@ -4,12 +4,14 @@
   --size-keywords: var(--small);
   --padding-layout-m: var(--l);
   --padding-card-m: var(--xs);
-  --margin-section-m: var(--l) 0;
+  --padding-skills: 0 var(--xs);
+  --margin-section-m: var(--m) 0;
   --margin-copy-intro-m: 0 0 0 var(--m);
   --margin-image: var(--l3) 0;
   --margin-title: 0 0 var(--m) 0;
   --margin-keywords-col: 0 0 0 var(--s);
   --margin-keywords-row: var(--s) 0;
+  --margin-skills-col: 0 0 0 var(--l);
   --border-radius-img: var(--radius-soft);
 }
 
@@ -54,7 +56,8 @@
 }
 
 .List__Headings,
-.List .Card__Container {
+.List .Card__Container,
+.List__Skills {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -65,7 +68,8 @@
 }
 
 .List__Headings *,
-.List .Card__Container * {
+.List .Card__Container *,
+.List__Skills * {
   flex: 1;
 }
 
@@ -74,8 +78,18 @@
   margin: var(--margin-keywords-col);
 }
 
+.List__Skills > *:not(:first-child) {
+  margin: var(--margin-skills-col);
+}
+
 .List__Headings li,
-.List .Card__Container li {
+.List .Card__Container li,
+.List__Skills li {
   font-size: var(--size-keywords);
   margin: var(--margin-keywords-row);
+}
+
+.List__Headings,
+.List__Skills {
+  padding: var(--padding-skills);
 }

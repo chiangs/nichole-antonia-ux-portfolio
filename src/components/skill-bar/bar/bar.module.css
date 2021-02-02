@@ -1,0 +1,39 @@
+.Bar__Container {
+  --radius-round: 25px;
+  --rdaius-circle: 50px;
+  --color-purple: var(--purple-500);
+  --color-green: var(--green-500);
+  --height-bar: 10px;
+  --height-point: 14px;
+}
+
+.Bar__Container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Bar__Bottom {
+  z-index: 0;
+  border-radius: var(--radius-round);
+  background-color: var(--color-green);
+  height: var(--height-bar);
+}
+
+.Bar__Top {
+  position: absolute;
+  z-index: 1;
+  border-radius: var(--radius-round);
+  background-color: var(--color-purple);
+  height: var(--height-bar);
+}
+
+.Bar__Point {
+  position: absolute;
+  z-index: 1;
+  border-radius: var(--rdaius-circle);
+  background-color: var(--color-purple);
+  height: var(--height-point);
+  width: var(--height-point);
+}
