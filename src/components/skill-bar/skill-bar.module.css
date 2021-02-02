@@ -1,0 +1,10 @@
+.Labels {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Labels > :nth-child(2) {
+  text-align: right;
+}

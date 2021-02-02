@@ -10,9 +10,11 @@ const SkillBar = ({ type, value, label1, label2 }) => {
 
   return (
     <div className={css.Skillbar__Container}>
-      {skillLabel1}
+      <div className={css.Labels}>
+        {skillLabel1}
+        {skillLabel2}
+      </div>
       {skillBar}
-      {skillLabel2}
     </div>
   )
 }
