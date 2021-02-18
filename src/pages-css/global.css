@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Poppins:ital,wght@0,400;0,500;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,700&display=swap");
 
 :root {
   --white: hsl(100, 100%, 100%);
@@ -7,7 +7,7 @@
   --green-500: hsl(171, 39%, 55%);
   --purple-500: hsl(274, 83%, 27%);
   /* fonts */
-  --font-display: "ABeeZee", Helvetica, sans-serif;
+  --font-display: "Poppins", Helvetica, sans-serif;
   --font-main: "Poppins", Helvetica, sans-serif;
   /* typeface */
   --base-size: 1rem;

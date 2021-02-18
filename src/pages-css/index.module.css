@@ -5,6 +5,10 @@
   --margin-copy-intro-m: var(--l4) 0 0 var(--m);
   --margin-testimonial-m: 0 0 var(--m) 0;
   --size-author-m: var(--small);
+  --size-font-intro: var(--h6);
+  --height-intro: 300px;
+  --color-intro-bg: var(--green-300);
+  --radius-intro: var(--radius-soft);
 }
 
 .Index {
@@ -24,6 +28,10 @@
   align-items: center;
 }
 
+/* 
+
+
+
 .Index__Section.Brand {
   justify-self: flex-start;
 }
@@ -34,6 +42,7 @@
 
 .Copy__Intro {
   margin: var(--margin-copy-intro-m);
+  font-size: var(--size-font-intro);
 }
 
 .Copy__QuoteImage {
@@ -48,10 +57,47 @@
 .Testimonial__Author {
   font-size: var(--size-author-m);
   text-align: center;
-}
+} */
 
 @media (min-width: 768px) {
   .Index__Section {
     flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .Title {
+    height: 100%;
+    font-size: var(--h1);
+    margin: 0 0 var(--m) 0;
+  }
+
+  .Profile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Intro {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    height: var(--height-intro);
+    background-color: var(--color-intro-bg);
+    border-radius: var(--radius-intro);
+    position: relative;
+  }
+
+  .Intro__Text {
+    height: var(--height-intro);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .Copy__Intro {
+    font-size: var(--size-font-intro);
+    line-height: 32px;
   }
 }

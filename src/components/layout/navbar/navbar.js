@@ -4,15 +4,20 @@ import PropTypes from "prop-types"
 import css from "./navbar.module.css"
 import Logo from "../../../assets/logo.svg"
 
+export const LINK_INDEX = "Home"
+export const LINK_WORK = "Work"
+export const ROUTE_INDEX = "/"
+export const ROUTE_WORK = "/work/"
+
 const Navbar = ({ view }) => {
   const routes = [
     {
-      label: "Work",
-      path: "/work/",
+      label: LINK_INDEX,
+      path: ROUTE_INDEX,
     },
     {
-      label: "About",
-      path: "/about/",
+      label: LINK_WORK,
+      path: ROUTE_WORK,
     },
   ]
 

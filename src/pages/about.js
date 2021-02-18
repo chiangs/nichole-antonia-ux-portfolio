@@ -138,7 +138,11 @@ const AboutPage = ({ view }) => {
       )
   )
 
-  return <>{content}</>
+  return (
+    <>
+      <p>Nothing to see here!</p>
+    </>
+  )
 }
 
 export default AboutPage
