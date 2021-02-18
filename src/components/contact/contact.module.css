@@ -1,5 +1,7 @@
 .Contact {
-  --size-font-m: var(--h6);
+  --size-font-s: var(--small);
+  --size-font-m: var(--base-size);
+  --size-font-l: var(--h6);
   --color: var(--purple-500);
   --margin-li: var(--xs) 0;
   --margin-a: 0 var(--s);
@@ -11,6 +13,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 
 .Contact__Info {
@@ -19,7 +22,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .Info__Item {
@@ -33,20 +36,44 @@
 
 .Info__Item a {
   margin: var(--margin-a);
-  font-size: var(--size-font-m);
+  font-size: var(--size-font-s);
   color: var(--color);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   text-decoration: none;
   user-select: all;
   -moz-user-select: all;
+}
+
+.Info__Item a::after {
+  content: attr(data-text);
+  content: attr(data-text) / "";
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  font-weight: bold;
+
+  @media speech {
+    display: none;
+  }
 }
 
 .Info__Item a:hover {
   font-weight: bold;
 }
 
-@media (max-width: 1000px) {
-  .Contact__Info {
-    flex-direction: column;
-    align-items: flex-start;
+@media (min-width: 1100px) {
+  .Info__Item a {
+    font-size: var(--size-font-m);
+  }
+}
+
+@media (min-width: 1800px) {
+  .Info__Item a {
+    font-size: var(--size-font-l);
   }
 }

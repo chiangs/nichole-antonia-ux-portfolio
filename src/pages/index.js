@@ -30,12 +30,10 @@ const IndexPage = ({ view }) => {
   const actionPicAlt2 =
     "Nichole Antonia designing prototype at table shot from above"
   const aboutCopy = useAbout()
-  const about2Copy = useAbout2()
   const hobbies = useHobbies()
   const worksWith = useWorksWith()
   const personality = usePersonality()
   const motivations = useMotivations()
-
   // Dims
   const profilePicDimensions = {
     height: 300,
@@ -186,11 +184,15 @@ const IndexPage = ({ view }) => {
               <li>STUFF1</li>
               <li>STUFF2</li>
             </ul>
-            <Card>
-              <div className={css.Card__Container}>
-                <Contact />
-              </div>
-            </Card>
+          </section>
+          <section className={css.Index__Section}>
+            <div className={css.Contact}>
+              <Card>
+                <div className={css.Card__Container}>
+                  <Contact />
+                </div>
+              </Card>
+            </div>
           </section>
         </a.article>
       )

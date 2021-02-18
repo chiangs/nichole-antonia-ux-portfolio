@@ -14,17 +14,26 @@ const contact = props => {
       <ul className={css.Contact__Info}>
         <li className={css.Info__Item}>
           <Email />
-          <a href={`mailto:${tempContactEmail}`}>{tempContactEmail}</a>
+          <a href={`mailto:${tempContactEmail}`} data-text={tempContactEmail}>
+            {tempContactEmail}
+          </a>
         </li>
 
         <li className={css.Info__Item}>
           <Phone />
-          <a href={`tel:${tempContactCopyPhone}`}>{tempContactCopyPhone}</a>
+          <a
+            href={`tel:${tempContactCopyPhone}`}
+            data-text={tempContactCopyPhone}
+          >
+            {tempContactCopyPhone}
+          </a>
         </li>
 
         <li className={css.Info__Item}>
           <LinkedIn />
-          <a href={tempLinkedIn}>{templLinkedInText}</a>
+          <a href={tempLinkedIn} data-text={templLinkedInText}>
+            {templLinkedInText}
+          </a>
         </li>
       </ul>
     </section>

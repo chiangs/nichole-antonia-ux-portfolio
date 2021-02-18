@@ -1,6 +1,6 @@
 .Index {
   /* Mobile First */
-  --padding-layout-m: var(--l3) var(--l);
+  --padding-layout-m: var(--l3) var(--l) var(--l) var(--l);
   --height-intro: 300px;
   --color-intro-bg: var(--green-300);
   --radius-intro: var(--radius-soft);
@@ -31,6 +31,10 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+
+.Index__Section:last-child {
+  margin: 0;
 }
 
 .About > * {
@@ -121,6 +125,10 @@
 .List__Headings,
 .List__Skills {
   padding: var(--padding-skills);
+}
+
+.Contact {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
