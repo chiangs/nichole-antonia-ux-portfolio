@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react"
-import PropTypes from "prop-types"
 import css from "./bar.module.css"
 
 const Bar = ({ type, value }) => {

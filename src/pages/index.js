@@ -8,7 +8,6 @@ import {
   useIntro,
   useTestimonial,
   useAbout,
-  useAbout2,
   useHobbies,
   useWorksWith,
   usePersonality,
