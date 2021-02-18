@@ -24,7 +24,7 @@ const IndexPage = ({ view }) => {
   const [mounted, setMounted] = useState(false)
   const introCopy = useIntro()
   const testimonial = useTestimonial()
-  const actionPic = "/action-001.jpg"
+  const actionPic = "/action-001b.jpg"
   const actionPic2 = "/action-002.jpg"
   const actionPicAlt = "Nichole Antonia designing prototype at table"
   const actionPicAlt2 =
@@ -42,12 +42,12 @@ const IndexPage = ({ view }) => {
     width: 300,
   }
   const actionPicDimensions = {
-    height: 400,
-    width: 180,
+    height: 300,
+    width: 300,
   }
   const actionPicDimensions2 = {
-    height: 160,
-    width: 400,
+    height: 440,
+    width: 890,
   }
 
   // Effects
@@ -109,7 +109,62 @@ const IndexPage = ({ view }) => {
               </div>
             </div>
           </section>
-          {/* <section className={css.Index__Section}>
+          <section className={css.Index__Section}>
+            <div className={css.About}>
+              <Image
+                src={actionPic2}
+                alt={actionPicAlt2}
+                dimensions={actionPicDimensions2}
+              />
+            </div>
+            {/* Personality */}
+            <section
+              className={[
+                "wrap",
+                css.About__Section,
+                css.About__Personality,
+              ].join(" ")}
+            >
+              <div className={css.List__Headings}>
+                <p>{motivations.title}</p>
+                <p>{personality.title}</p>
+              </div>
+              <div className={css.List__Skills}>
+                <ul>{motivationItems}</ul>
+                <ul>{personalityItems}</ul>
+              </div>
+            </section>
+            {/* Uses */}
+            <section
+              className={["wrap", css.About__Section, css.About__Uses].join(
+                " "
+              )}
+            >
+              <div className={css.List__Headings}>
+                <p>{hobbies.title}</p>
+                <p>{worksWith.title}</p>
+              </div>
+              <div className={css.List}>
+                <Card>
+                  <div className={css.Card__Container}>
+                    <ul>{hobbyListItems}</ul>
+                    <ul>{worksWithItems}</ul>
+                  </div>
+                </Card>
+              </div>
+            </section>
+          </section>
+
+          <section className={css.Index__Section}>
+            <section className={css.About__Section}>
+              <p className={css.Copy__Intro}>{aboutCopy}</p>
+              <Image
+                className={css.About__Image}
+                src={actionPic}
+                alt={actionPicAlt}
+                dimensions={actionPicDimensions}
+              />
+            </section>
             <Card>
               <div className={css.Card__Container}>
                 <div className={css.Copy__QuoteImage}>
@@ -126,12 +181,17 @@ const IndexPage = ({ view }) => {
             </Card>
           </section>
           <section className={css.Index__Section}>
+            <h3>Latest case studies</h3>
+            <ul className={css.Case__Studies}>
+              <li>STUFF1</li>
+              <li>STUFF2</li>
+            </ul>
             <Card>
               <div className={css.Card__Container}>
                 <Contact />
               </div>
             </Card>
-          </section> */}
+          </section>
         </a.article>
       )
   )
