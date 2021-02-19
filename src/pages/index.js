@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 import Quote from "../assets/quote-close.svg"
 import css from "../pages-css/index.module.css"
+import BubblesLeft from "../assets/bubbles-left.svg"
+import BubblesRight from "../assets/bubbles-right.svg"
 import { Brand, Image, Card, Contact, SkillBar } from "../components"
 import {
   useSiteMetadata,
@@ -18,6 +20,8 @@ const IndexPage = ({ view }) => {
   // Constants
   const profilePicSrc = "/profile.jpg"
   const profilePicAlt = "Nichole Antonia profile standing"
+  const titleTestimonial = "Testimonial"
+  const titleCases = "Latest case studies"
   // Content
   const { title } = useSiteMetadata()
   const [mounted, setMounted] = useState(false)
@@ -107,7 +111,7 @@ const IndexPage = ({ view }) => {
             </div>
           </section>
           <section className={css.Index__Section}>
-            <div className={css.About}>
+            <div className={css.About__Image}>
               <Image
                 src={actionPic2}
                 alt={actionPicAlt2}
@@ -122,14 +126,17 @@ const IndexPage = ({ view }) => {
                 css.About__Personality,
               ].join(" ")}
             >
-              <div className={css.List__Headings}>
-                <p>{motivations.title}</p>
-                <p>{personality.title}</p>
+              <div className={css.Personality__Container}>
+                <div className={css.List__Headings}>
+                  <p>{motivations.title}</p>
+                  <p>{personality.title}</p>
+                </div>
+                <div className={css.List__Skills}>
+                  <ul>{motivationItems}</ul>
+                  <ul>{personalityItems}</ul>
+                </div>
               </div>
-              <div className={css.List__Skills}>
-                <ul>{motivationItems}</ul>
-                <ul>{personalityItems}</ul>
-              </div>
+              <BubblesLeft className={css.Bubbles__1} />
             </section>
             {/* Uses */}
             <section
@@ -137,37 +144,38 @@ const IndexPage = ({ view }) => {
                 " "
               )}
             >
-              <div className={css.List__Headings}>
-                <p>{hobbies.title}</p>
-                <p>{worksWith.title}</p>
-              </div>
-              <div className={css.List}>
-                <Card>
-                  <div className={css.Card__Container}>
-                    <ul>{hobbyListItems}</ul>
+              <div className={css.Uses__Container}>
+                <div className={css.List__Headings}>
+                  <p>{worksWith.title}</p>
+                  <p>{hobbies.title}</p>
+                </div>
+                <div className={css.List}>
+                  <div className={css.List__Uses}>
                     <ul>{worksWithItems}</ul>
+                    <ul>{hobbyListItems}</ul>
                   </div>
-                </Card>
+                </div>
+                <BubblesRight className={css.Bubbles__2} />
               </div>
             </section>
           </section>
-
+          {/* Testimonials */}
           <section className={css.Index__Section}>
-            <section className={css.About__Section}>
-              <p className={css.Copy__Intro}>{aboutCopy}</p>
+            <div className={css.Testimonial__Image}>
               <Image
                 className={css.About__Image}
                 src={actionPic}
                 alt={actionPicAlt}
                 dimensions={actionPicDimensions}
               />
-            </section>
-            <Card>
-              <div className={css.Card__Container}>
-                <div className={css.Copy__QuoteImage}>
-                  <Quote />
-                </div>
-                <blockquote>
+            </div>
+            <div className={css.Intro}>
+              <h2 className={[css.Headings, css.Title__Testimonial].join(" ")}>
+                {titleTestimonial}
+              </h2>
+              <Quote className={css.Quote} />
+              <div className={css.Intro__Text}>
+                <blockquote className={css.Copy__Intro}>
                   <p className={css.Testimonial}>{testimonial.body}</p>
                   <section className={css.Testimonial__Author}>
                     <p>{testimonial.author}</p>
@@ -175,10 +183,13 @@ const IndexPage = ({ view }) => {
                   </section>
                 </blockquote>
               </div>
-            </Card>
+            </div>
           </section>
+          {/* Case Studies */}
           <section className={css.Index__Section}>
-            <h3>Latest case studies</h3>
+            <h2 className={[css.Headings, css.Title__Cases].join(" ")}>
+              {titleCases}
+            </h2>
             <ul className={css.Case__Studies}>
               <li>STUFF1</li>
               <li>STUFF2</li>

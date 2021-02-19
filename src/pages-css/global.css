@@ -6,6 +6,7 @@
   --green-300: hsl(168, 41%, 84%);
   --green-500: hsl(171, 39%, 55%);
   --purple-500: hsl(274, 83%, 27%);
+  --grey: hsl(0, 0%, 43%);
   /* fonts */
   --font-display: "Poppins", Helvetica, sans-serif;
   --font-main: "Poppins", Helvetica, sans-serif;
