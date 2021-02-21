@@ -58,4 +58,5 @@ fields:
   description: Load photos here that will be used. Then insert them by referencing
     the gallery.
 pages:
+- projects/nicu-2-you.md
 - projects/organic-ecommerce-website.md
