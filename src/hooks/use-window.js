@@ -23,7 +23,7 @@ const getSize = windowObj =>
     ? {
         width: windowObj.innerWidth,
         height: windowObj.innerHeight,
-        view: windowObj.innerWidth < 768 ? "mobile" : "desktop",
+        view: windowObj.innerWidth < 1000 ? "mobile" : "desktop",
       }
     : defaultDesktop
 

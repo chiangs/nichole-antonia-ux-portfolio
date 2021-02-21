@@ -1,6 +1,6 @@
 .Index {
   /* Mobile First */
-  --padding-layout-m: var(--l3) var(--l) var(--l) var(--l);
+  --padding-layout-s: var(--l3) var(--l3) var(--l) var(--l3);
   --height-intro: 300px;
   --color-intro-bg: var(--green-300);
   --color-titles: var(--purple-500);
@@ -14,9 +14,10 @@
   --margin-section-s: 0 0 150px 0;
 
   /* Desktop */
+  --padding-layout-d: var(--l3) var(--l) var(--l) var(--l);
   --margin-title-d: 0 0 var(--m) 0;
   --margin-profile-d: 0 50px 0 0;
-  --margin-section-m: 0 0 350px 0;
+  --margin-section-d: 0 0 350px 0;
   --pos-top-intro-d: 70px;
   --pos-left-intro-d: -35px;
   --padding-intro-d: 0 80px 0 0;
@@ -25,7 +26,7 @@
 }
 
 .Index {
-  padding: var(--padding-layout-m);
+  padding: var(--padding-layout-s);
   height: 100%;
   width: 100%;
   display: flex;
@@ -33,7 +34,7 @@
 }
 
 .Index__Section {
-  margin: var(--margin-section-m);
+  margin: var(--margin-section-s);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,13 +51,24 @@
   opacity: 65%;
 }
 
-.Personality__Container {
+.Personality__Container,
+.Uses__Container {
   position: relative;
+  width: 100%;
 }
 
 .Personality__Bubbles {
   position: absolute;
   top: 0;
+}
+
+.About__Section {
+  max-height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  right: 5%;
 }
 
 .About__Uses {
@@ -84,11 +96,12 @@
 
 .List__Headings > *:not(:first-child),
 .List .List__Uses > *:not(:first-child) {
-  margin: var(--margin-keywords-col);
+  min-width: 140px;
 }
 
 .List__Skills > *:not(:first-child) {
   margin: var(--margin-skills-col);
+  min-width: 140px;
 }
 
 .List__Headings li,
@@ -127,27 +140,46 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.Cases > li:not(:last-child) {
-  flex: 1;
+.Cases > li {
+  flex: 1 1 500px;
   margin: var(--margin-case);
-}
-
-.Cases > li:last-child {
-  flex: 1;
-  margin: var(--margin-case-last);
 }
 
 .Link__Card {
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+.Link__Card:active,
+.Link__Card:visited {
+  color: inherit;
+}
+
+.Bubbles__1,
+.Bubbles__2 {
+  display: none;
+}
+
+.About__Personality,
+.About__Uses {
+  width: 100%;
+}
+
+.Quote {
+  max-height: 25px;
+}
+
+@media (min-width: 1000px) {
+  .Index {
+    padding: var(--padding-layout-d);
+  }
+
   .Index__Section {
     flex-direction: row;
     align-items: flex-start;
-    margin: var(--margin-section-m);
+    margin: var(--margin-section-d);
   }
 
   .Title {
@@ -201,13 +233,17 @@
     align-items: center;
   }
 
+  .List__Headings li,
+  .List .List__Uses li,
+  .List__Skills li {
+    font-size: var(--size-keywords);
+    margin: var(--margin-keywords-row);
+    white-space: nowrap;
+    min-width: 140px;
+  }
+
   .About__Section {
-    max-height: 50%;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .About__Personality {
@@ -216,9 +252,19 @@
     left: -15%;
   }
 
+  .About__Uses {
+    width: unset;
+  }
+
   .Personality__Container,
   .Uses__Container {
     max-width: 500px;
+  }
+
+  .Bubbles__1,
+  .Bubbles__2 {
+    position: absolute;
+    display: unset;
   }
 
   .Bubbles__1 {
@@ -231,7 +277,7 @@
     position: absolute;
     top: -70%;
     height: 225%;
-    right: -97%;
+    right: -80%;
   }
 
   .Quote {
@@ -260,6 +306,14 @@
     margin: 20px 0 0 0;
     font-size: var(--h6);
     color: var(--grey);
+  }
+
+  .Cases > li:not(:last-child) {
+    margin: var(--margin-case);
+  }
+
+  .Cases > li:last-child {
+    margin: var(--margin-case-last);
   }
 }
 

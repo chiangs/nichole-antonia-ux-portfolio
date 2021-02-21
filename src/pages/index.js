@@ -54,7 +54,7 @@ const IndexPage = ({ view }) => {
     width: 300,
   }
   const actionPicDimensions2 = {
-    height: 440,
+    height: "auto",
     width: 890,
   }
 
@@ -95,10 +95,37 @@ const IndexPage = ({ view }) => {
       />
     </li>
   ))
-  const caseStudies = ["s", "t"].map(s => (
-    <li>
+
+  const NICU_2U = {
+    title: "NICU 2 YOU",
+    keywords: ["research", "prototype", "test"],
+    linkExternal: "#",
+    image: {
+      src: "/splash-nicu.png",
+      alt: "NICU 2 You design",
+      dimensions: {
+        height: 238,
+        width: 452,
+      },
+    },
+  }
+  const FOOD_RESCUE = {
+    title: "Food rescue",
+    keywords: ["research", "prototype", "test"],
+    linkExternal: "#",
+    image: {
+      src: "/splash-food-rescue.jpg",
+      alt: "Food rescue design",
+      dimensions: {
+        height: 238,
+        width: 452,
+      },
+    },
+  }
+  const caseStudies = [NICU_2U, FOOD_RESCUE].map(s => (
+    <li key={s.title}>
       <a className={css.Link__Card} href={s.linkExternal}>
-        <ProjectPreview {...s} />
+        <ProjectPreview {...s} theme={"mini"} />
       </a>
     </li>
   ))

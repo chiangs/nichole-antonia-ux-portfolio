@@ -88,7 +88,7 @@ p {
   flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   :root {
     --type-scale: 1.2;
   }
@@ -107,5 +107,17 @@ p {
 @media (min-width: 1600px) {
   main {
     padding: 0 350px;
+  }
+}
+
+@media (min-width: 2000px) {
+  main {
+    padding: 0 450px;
+  }
+}
+
+@media (min-width: 2250px) {
+  main {
+    padding: 0 550px;
   }
 }

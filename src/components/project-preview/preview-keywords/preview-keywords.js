@@ -1,8 +1,6 @@
 import React from "react"
 
-const PreviewKeywords = props => {
-  return <div>{props.children}</div>
-}
+const PreviewKeywords = props => <div>{props.children}</div>
 
 PreviewKeywords.propTypes = {}
 

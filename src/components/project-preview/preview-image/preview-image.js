@@ -1,7 +1,5 @@
 import React from "react"
 
-const PreviewImage = () => {
-  return <div></div>
-}
+const PreviewImage = props => <div>{props.children}</div>
 
 export default PreviewImage

@@ -1,9 +1,5 @@
 import React from "react"
 
-const PreviewLabel = props => {
-  return <div>{props.children}</div>
-}
-
-PreviewLabel.propTypes = {}
+const PreviewLabel = props => <div>{props.children}</div>
 
 export default PreviewLabel
