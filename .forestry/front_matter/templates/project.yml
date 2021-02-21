@@ -57,6 +57,12 @@ fields:
   label: Gallery
   description: Load photos here that will be used. Then insert them by referencing
     the gallery.
+- name: linkexternal
+  type: text
+  config:
+    required: false
+  label: linkExternal
+  description: URL to external location, aka GoogleDrive or Figma
 pages:
 - projects/nicu-2-you.md
 - projects/organic-ecommerce-website.md
