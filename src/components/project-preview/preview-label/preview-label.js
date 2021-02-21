@@ -1,8 +1,7 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 const PreviewLabel = props => {
-  return <div></div>
+  return <div>{props.children}</div>
 }
 
 PreviewLabel.propTypes = {}

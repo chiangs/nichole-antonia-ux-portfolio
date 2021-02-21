@@ -9,6 +9,9 @@
   --margin-skills-col: 0 0 0 var(--l);
   --margin-keywords-col: 0 0 0 var(--s);
   --margin-keywords-row: var(--s) 0;
+  --margin-case: var(--s) var(--s) var(--s) 0;
+  --margin-case-last: var(--s) 0 var(--s) var(--s);
+  --margin-section-s: 0 0 150px 0;
 
   /* Desktop */
   --margin-title-d: 0 0 var(--m) 0;
@@ -108,6 +111,36 @@
 
 .Contact {
   width: 100%;
+}
+
+.Case__Studies {
+  flex-wrap: wrap;
+  margin: var(--margin-section-s) !important;
+}
+
+.Cases,
+.Title__Cases {
+  width: 100%;
+}
+
+.Cases {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.Cases > li:not(:last-child) {
+  flex: 1;
+  margin: var(--margin-case);
+}
+
+.Cases > li:last-child {
+  flex: 1;
+  margin: var(--margin-case-last);
+}
+
+.Link__Card {
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {

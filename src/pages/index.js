@@ -4,7 +4,14 @@ import Quote from "../assets/quote-close.svg"
 import css from "../pages-css/index.module.css"
 import BubblesLeft from "../assets/bubbles-left.svg"
 import BubblesRight from "../assets/bubbles-right.svg"
-import { Brand, Image, Card, Contact, SkillBar } from "../components"
+import {
+  Brand,
+  Image,
+  Card,
+  Contact,
+  SkillBar,
+  ProjectPreview,
+} from "../components"
 import {
   useSiteMetadata,
   useIntro,
@@ -86,6 +93,13 @@ const IndexPage = ({ view }) => {
         label1={s.label_1}
         label2={s.label_2}
       />
+    </li>
+  ))
+  const caseStudies = ["s", "t"].map(s => (
+    <li>
+      <a className={css.Link__Card} href={s.linkExternal}>
+        <ProjectPreview {...s} />
+      </a>
     </li>
   ))
 
@@ -186,14 +200,13 @@ const IndexPage = ({ view }) => {
             </div>
           </section>
           {/* Case Studies */}
-          <section className={css.Index__Section}>
+          <section
+            className={[css.Index__Section, css.Case__Studies].join(" ")}
+          >
             <h2 className={[css.Headings, css.Title__Cases].join(" ")}>
               {titleCases}
             </h2>
-            <ul className={css.Case__Studies}>
-              <li>STUFF1</li>
-              <li>STUFF2</li>
-            </ul>
+            <ul className={css.Cases}>{caseStudies}</ul>
           </section>
           <section className={css.Index__Section}>
             <div className={css.Contact}>
