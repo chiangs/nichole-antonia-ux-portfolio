@@ -1,4 +1,12 @@
 ---
 label: Copy2
 hide_body: false
-fields: []
+fields:
+- name: published
+  type: boolean
+  label: Published
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
