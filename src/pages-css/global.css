@@ -12,7 +12,7 @@
   --font-main: "Poppins", Helvetica, sans-serif;
   /* typeface */
   --base-size: 1.2rem;
-  --type-scale: 1.125;
+  --type-scale: 1.1;
   --small: calc(var(--base-size) * 0.8);
   --h6: calc(var(--base-size) * var(--type-scale));
   --h5: calc(var(--h6) * var(--type-scale));
@@ -84,24 +84,30 @@ p {
 }
 
 main {
-  padding: 0 50px;
+  padding: 0 10px;
 }
 
 .wrap {
   flex-wrap: wrap;
 }
 
-@media (min-width: 1000px) {
-  :root {
-    --type-scale: 1.2;
-  }
-
+@media (min-width: 800px) {
   main {
     padding: 0 100px;
   }
 }
 
+@media (min-width: 1000px) {
+  :root {
+    --type-scale: 1.125;
+  }
+}
+
 @media (min-width: 1200px) {
+  :root {
+    --type-scale: 1.2;
+  }
+
   main {
     padding: 0 200px;
   }

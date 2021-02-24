@@ -1,7 +1,7 @@
 .Preview__Card {
   --radius-card: var(--radius-soft);
   --radius-button: var(--radius-pill);
-  --padding-info: var(--m) var(--xs);
+  --padding-info: var(--s);
   --padding-button: var(--s) var(--m);
   --color-keyword: var(--grey);
   --color-title: var(--black);
@@ -9,7 +9,6 @@
   --color-bg-button: var(--green-300);
   --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
   --shadow-button: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  --size-button: var(--base-size);
 }
 
 .Preview__Card {
@@ -39,6 +38,7 @@
 }
 
 .Keyword {
+  font-size: var(--small);
   text-transform: uppercase;
   color: var(--color-keyword);
 }
@@ -72,7 +72,6 @@
   border-radius: var(--radius-button);
   padding: var(--padding-button);
   box-shadow: var(--shadow-button);
-  font-size: var(--size-button);
 }
 
 .Preview__Card .Preview__Button {

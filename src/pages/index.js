@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 import Quote from "../assets/quote-close.svg"
 import css from "../pages-css/index.module.css"
-import BubblesLeft from "../assets/bubbles-left.svg"
-import BubblesRight from "../assets/bubbles-right.svg"
 import {
   Brand,
   Image,
@@ -13,6 +11,7 @@ import {
   ProjectPreview,
 } from "../components"
 import {
+  useHast,
   useSiteMetadata,
   useIntro,
   useTestimonial,
@@ -31,13 +30,14 @@ const IndexPage = ({ view }) => {
   // Content
   const { title } = useSiteMetadata()
   const [mounted, setMounted] = useState(false)
-  const introCopy = useIntro()
-  const testimonial = useTestimonial()
+  const introAst = useIntro()
+  const introCopy = useHast(introAst)
+  const { testimonialFrontmatter, testimonialAst } = useTestimonial()
+  const testimonialCopy = useHast(testimonialAst)
+
   const actionPic = "/action-001b.jpg"
-  const actionPic2 = "/action-002.jpg"
   const actionPicAlt = "Nichole Antonia designing prototype at table"
-  const actionPicAlt2 =
-    "Nichole Antonia designing prototype at table shot from above"
+
   const hobbies = useHobbies()
   const worksWith = useWorksWith()
   const personality = usePersonality()
@@ -149,15 +149,7 @@ const IndexPage = ({ view }) => {
               </div>
             </div>
           </section>
-          <section className={css.Index__Section}>
-            <div className={css.About__Image}>
-              <Image
-                src={actionPic2}
-                alt={actionPicAlt2}
-                dimensions={actionPicDimensions2}
-              />
-            </div>
-            {/* Personality */}
+          {/* <section className={css.Index__Section}>
             <section
               className={[
                 "wrap",
@@ -175,9 +167,7 @@ const IndexPage = ({ view }) => {
                   <ul>{personalityItems}</ul>
                 </div>
               </div>
-              <BubblesLeft className={css.Bubbles__1} />
             </section>
-            {/* Uses */}
             <section
               className={["wrap", css.About__Section, css.About__Uses].join(
                 " "
@@ -194,10 +184,9 @@ const IndexPage = ({ view }) => {
                     <ul>{hobbyListItems}</ul>
                   </div>
                 </div>
-                <BubblesRight className={css.Bubbles__2} />
               </div>
             </section>
-          </section>
+          </section> */}
           {/* Testimonials */}
           <section className={css.Index__Section}>
             <div className={css.Testimonial__Image}>
@@ -215,10 +204,12 @@ const IndexPage = ({ view }) => {
               <Quote className={css.Quote} />
               <div className={css.Intro__Text}>
                 <blockquote className={css.Copy__Intro}>
-                  <p className={css.Testimonial}>{testimonial.body}</p>
+                  <p className={css.Testimonial}>{testimonialCopy}</p>
                   <section className={css.Testimonial__Author}>
-                    <p>{testimonial.author}</p>
-                    <p>{testimonial.author_title_and_organization}</p>
+                    <p>{testimonialFrontmatter.author}</p>
+                    <p>
+                      {testimonialFrontmatter.author_title_and_organization}
+                    </p>
                   </section>
                 </blockquote>
               </div>

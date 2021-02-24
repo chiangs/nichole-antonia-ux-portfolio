@@ -11,12 +11,13 @@ const useIntro = () => {
             title
             body
           }
+          htmlAst
         }
       }
     }
   `)
 
-  return data.allMarkdownRemark.nodes[0].frontmatter.body
+  return data.allMarkdownRemark.nodes[0].htmlAst
 }
 
 export default useIntro

@@ -1,6 +1,6 @@
 .Index {
   /* Mobile First */
-  --padding-layout-s: var(--l3) var(--l3) var(--l) var(--l3);
+  --padding-layout-s: var(--l3) 0;
   --height-intro: 300px;
   --color-intro-bg: var(--green-300);
   --color-titles: var(--purple-500);
@@ -9,7 +9,8 @@
   --margin-skills-col: 0 0 0 var(--l);
   --margin-keywords-col: 0 0 0 var(--s);
   --margin-keywords-row: var(--s) 0;
-  --margin-case: var(--s) var(--s) var(--s) 0;
+  --margin-case-m: var(--s);
+  --margin-case-d: var(--s) var(--s) var(--s) 0;
   --margin-case-last: var(--s) 0 var(--s) var(--s);
   --margin-section-s: 0 0 150px 0;
 
@@ -31,6 +32,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.Title {
+  height: 100%;
+}
+
+.Headings {
+  color: var(--color-titles);
 }
 
 .Index__Section {
@@ -140,12 +149,13 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .Cases > li {
   flex: 1 1 500px;
-  margin: var(--margin-case);
+  margin: var(--margin-case-m);
 }
 
 .Link__Card {
@@ -182,22 +192,11 @@
     margin: var(--margin-section-d);
   }
 
-  .Title {
-    height: 100%;
-    font-size: var(--h1);
-    margin: var(--margin-title-d);
-  }
-
-  .Headings {
-    color: var(--color-titles);
-  }
-
   .Profile {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin: var(--margin-profile-d);
   }
 
@@ -283,8 +282,10 @@
   .Quote {
     position: absolute;
     top: -20%;
-    left: -6%;
+    left: -7%;
     max-height: 100px;
+    height: 100px;
+    width: auto;
   }
 
   .Testimonial__Image {
@@ -304,12 +305,15 @@
   }
   .Testimonial__Author {
     margin: 20px 0 0 0;
-    font-size: var(--h6);
     color: var(--grey);
   }
 
+  .Testimonial__Author p {
+    font-size: var(--small);
+  }
+
   .Cases > li:not(:last-child) {
-    margin: var(--margin-case);
+    margin: var(--margin-case-d);
   }
 
   .Cases > li:last-child {

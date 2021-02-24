@@ -12,12 +12,16 @@ const useTestimonial = () => {
             author
             author_title_and_organization
           }
+          htmlAst
         }
       }
     }
   `)
 
-  return data.allMarkdownRemark.nodes[0].frontmatter
+  return {
+    testimonialFrontmatter: data.allMarkdownRemark.nodes[0].frontmatter,
+    testimonialAst: data.allMarkdownRemark.nodes[0].htmlAst,
+  }
 }
 
 export default useTestimonial
