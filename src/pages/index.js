@@ -16,7 +16,6 @@ import {
   useSiteMetadata,
   useIntro,
   useTestimonial,
-  useAbout,
   useHobbies,
   useWorksWith,
   usePersonality,
@@ -39,7 +38,6 @@ const IndexPage = ({ view }) => {
   const actionPicAlt = "Nichole Antonia designing prototype at table"
   const actionPicAlt2 =
     "Nichole Antonia designing prototype at table shot from above"
-  const aboutCopy = useAbout()
   const hobbies = useHobbies()
   const worksWith = useWorksWith()
   const personality = usePersonality()

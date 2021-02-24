@@ -1,3 +1,4 @@
+export { default as useHast } from "./use-hast"
 export { default as useWindow } from "./use-window"
 export { default as useSiteMetadata } from "./use-siteMetadata"
 export { default as useIntro } from "./use-intro"

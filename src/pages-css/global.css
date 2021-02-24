@@ -11,7 +11,7 @@
   --font-display: "Poppins", Helvetica, sans-serif;
   --font-main: "Poppins", Helvetica, sans-serif;
   /* typeface */
-  --base-size: 1rem;
+  --base-size: 1.2rem;
   --type-scale: 1.125;
   --small: calc(var(--base-size) * 0.8);
   --h6: calc(var(--base-size) * var(--type-scale));
@@ -80,8 +80,11 @@ h6 {
 }
 
 p {
-  font-size: var(--base-size);
-  line-height: 1.5rem;
+  font-size: var(--h6);
+}
+
+main {
+  padding: 0 50px;
 }
 
 .wrap {
@@ -100,7 +103,7 @@ p {
 
 @media (min-width: 1200px) {
   main {
-    padding: 0 150px;
+    padding: 0 200px;
   }
 }
 
@@ -118,6 +121,6 @@ p {
 
 @media (min-width: 2250px) {
   main {
-    padding: 0 550px;
+    padding: 0 600px;
   }
 }

@@ -1,0 +1,25 @@
+.About {
+  --color-title: var(--purple-500);
+  --margin-p-d: 40px 0;
+}
+.About {
+}
+
+.About__Title {
+  color: var(--color-title);
+}
+
+.About__Image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.About__Image img {
+  flex: 1;
+}
+
+.About p {
+  margin: var(--margin-p-d);
+}

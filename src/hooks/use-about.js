@@ -4,19 +4,19 @@ const useAbout = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        filter: { frontmatter: { title: { regex: "/About/" } } }
+        filter: { frontmatter: { title: { regex: "/About 1/" } } }
       ) {
         nodes {
           frontmatter {
             title
-            body
           }
+          htmlAst
         }
       }
     }
   `)
 
-  return data.allMarkdownRemark.nodes[0].frontmatter.body
+  return data.allMarkdownRemark.nodes[0].htmlAst
 }
 
 export default useAbout

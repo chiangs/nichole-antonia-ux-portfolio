@@ -6,8 +6,10 @@ import Logo from "../../../assets/logo.svg"
 
 export const LINK_INDEX = "Home"
 export const LINK_WORK = "Work"
+export const LINK_ABOUT = "About"
 export const ROUTE_INDEX = "/"
 export const ROUTE_WORK = "/work/"
+export const ROUTE_ABOUT = "/about/"
 
 const Navbar = ({ view }) => {
   const routes = [
@@ -18,6 +20,10 @@ const Navbar = ({ view }) => {
     {
       label: LINK_WORK,
       path: ROUTE_WORK,
+    },
+    {
+      label: LINK_ABOUT,
+      path: ROUTE_ABOUT,
     },
   ]
 
