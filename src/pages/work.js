@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 import css from "../pages-css/work.module.css"
 import { useProjects } from "../hooks"
+import { ProjectPreview, Card, Contact } from "../components"
 
 const WorkPage = ({ view }) => {
   // Content
@@ -19,11 +20,27 @@ const WorkPage = ({ view }) => {
     leave: { opacity: 0 },
   })
 
+  // Elements
+  const caseStudies = projects.map(p => (
+    <li key={p.title} className={css.Case}>
+      <a className={css.Link__Card} href={p.frontmatter.prototype_link}>
+        <ProjectPreview {...p.frontmatter} body={p.htmlAst} theme={"default"} />
+      </a>
+    </li>
+  ))
+
   const content = transitions.map(
     ({ item, key, props }) =>
       item && (
         <a.article className={css.Work} key={key} style={props}>
-          WorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWork
+          <ul className={css.Case__Studies}>{caseStudies}</ul>
+          <section className={css.Contact}>
+            <Card>
+              <div className={css.Card__Container}>
+                <Contact />
+              </div>
+            </Card>
+          </section>
         </a.article>
       )
   )

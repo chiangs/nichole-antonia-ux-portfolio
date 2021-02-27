@@ -1,0 +1,34 @@
+.Work {
+  /* Mobile */
+  --padding-layout-s: var(--l3) 0;
+  --margin-case-item-s: var(--l) 0;
+  /* Desktop */
+  --padding-layout-d: var(--l3) var(--l) var(--l) var(--l);
+  --margin-case-item-d: var(--l2) 0;
+}
+
+.Work {
+  padding: var(--padding-layout-s);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Case {
+  margin: var(--margin-case-item-s);
+}
+
+.Link__Card {
+  text-decoration: none;
+}
+
+@media (min-width: 1000px) {
+  .Work {
+    padding: var(--padding-layout-d);
+  }
+
+  .Case {
+    margin: var(--margin-case-item-d);
+  }
+}

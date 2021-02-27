@@ -5,7 +5,9 @@
   --padding-button: var(--s) var(--m);
   --color-keyword: var(--grey);
   --color-title: var(--black);
+  --color-description: var(--black);
   --position-button-mini: var(--s);
+  --position-button: var(--s);
   --color-bg-button: var(--green-300);
   --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 20px rgba(0, 0, 0, 0.25);
   --shadow-button: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -15,10 +17,10 @@
   width: 100%;
   flex: 1;
   display: flex;
+  flex-direction: row-reverse;
   padding: 0;
   border-radius: var(--radius-card);
-  min-height: 100px;
-  min-height: 300px;
+  min-height: 370px;
   box-shadow: var(--shadow);
 }
 
@@ -30,11 +32,16 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding: var(--padding-info);
+  position: relative;
 }
 
-.Preview__Card.Preview__Mini .Preview__Info {
+.Preview__Info > *:not(:first-child) {
+  margin: var(--s) 0 0 0;
+}
+
+.Preview__Mini .Preview__Info {
   flex: 0;
-  padding: var(--padding-info);
 }
 
 .Keyword {
@@ -51,12 +58,17 @@
   color: var(--color-title);
 }
 
+.Description {
+  color: var(--color-description);
+}
+
 .Preview__Image {
-  max-height: 239px;
+  max-height: 370px;
+  max-width: 50%;
   flex: 1;
   position: relative;
   overflow: hidden;
-  border-radius: 0 0 var(--radius-card) var(--radius-card);
+  border-radius: 0 0 0 var(--radius-card);
 }
 
 .Preview__Image img {
@@ -64,10 +76,33 @@
   height: 100%;
 }
 
+.Preview__Image > *:first-child {
+  height: 100%;
+}
+
+.Preview__Mini .Preview__Image {
+  max-height: 245px;
+  max-width: unset;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
+}
+
+.Preview__Mini .Preview__Image > * {
+  height: unset;
+}
+
 /* Button */
+.Default__Button__Wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .Preview__Button {
   cursor: pointer;
-  position: absolute;
   background-color: var(--color-bg-button);
   border-radius: var(--radius-button);
   padding: var(--padding-button);
@@ -80,6 +115,7 @@
 }
 
 .Preview__Card.Preview__Mini .Preview__Button {
+  position: absolute;
   bottom: var(--position-button-mini);
   right: var(--position-button-mini);
 }

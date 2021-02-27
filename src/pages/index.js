@@ -96,32 +96,6 @@ const IndexPage = ({ view }) => {
     </li>
   ))
 
-  //   const NICU_2U = {
-  //     title: "NICU 2 YOU",
-  //     keywords: ["research", "prototype", "test"],
-  //     linkExternal: "#",
-  //     image: {
-  //       src: "/splash-nicu.png",
-  //       alt: "NICU 2 You design",
-  //       dimensions: {
-  //         height: 238,
-  //         width: 452,
-  //       },
-  //     },
-  //   }
-  //   const FOOD_RESCUE = {
-  //     title: "Food rescue",
-  //     keywords: ["research", "prototype", "test"],
-  //     linkExternal: "#",
-  //     image: {
-  //       src: "/splash-food-rescue.jpg",
-  //       alt: "Food rescue design",
-  //       dimensions: {
-  //         height: 238,
-  //         width: 452,
-  //       },
-  //     },
-  //   }
   const caseStudies = projects.map(p => (
     <li key={p.title}>
       <a className={css.Link__Card} href={p.frontmatter.prototype_link}>

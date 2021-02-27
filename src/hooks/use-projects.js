@@ -15,6 +15,7 @@ const useProjects = () => {
           frontmatter {
             tags
             title
+            description
             page_link
             prototype_link
             hero_image

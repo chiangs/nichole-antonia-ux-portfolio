@@ -6,6 +6,7 @@ tags:
 - test
 duration: 3
 title: Food Rescue
+description: "An app designed to help the conscious consumer reduce food waste in a fun and engaging manner"
 page_link: "/projects/food-rescue"
 prototype_link: ''
 hero_image: "/splash-food-rescue.jpg"

@@ -7,6 +7,7 @@ import PreviewButton from "./preview-button/preview-button.js"
 
 const ProjectPreview = ({
   title,
+  description,
   tags,
   hero_image,
   hero_image_alt,
@@ -26,21 +27,37 @@ const ProjectPreview = ({
     </span>
   ))
   const titleElement = <h5 className={css.Title}>{title}</h5>
-  const buttonElement = <span>{buttonLabel}</span>
+  const descriptionElement = theme !== "mini" && (
+    <p className={css.Description}>{description}</p>
+  )
+  const miniButtonElement = theme === "mini" && (
+    <div className={css.Preview__Button}>
+      <PreviewButton>
+        <span>{buttonLabel}</span>
+      </PreviewButton>
+    </div>
+  )
+  const buttonElement = theme !== "mini" && (
+    <div className={css.Preview__Button}>
+      <PreviewButton>
+        <span>{buttonLabel}</span>
+      </PreviewButton>
+    </div>
+  )
 
   return (
     <aside className={previewStyle.join(" ")}>
       <section className={css.Preview__Info}>
         <PreviewKeywords>{keywordElements}</PreviewKeywords>
         <PreviewLabel>{titleElement}</PreviewLabel>
+        <PreviewLabel>{descriptionElement}</PreviewLabel>
+        <div className={css.Default__Button__Wrapper}>{buttonElement}</div>
       </section>
       <section className={css.Preview__Image}>
         <PreviewImage>
           <img src={hero_image} alt={hero_image_alt} />
         </PreviewImage>
-        <div className={css.Preview__Button}>
-          <PreviewButton>{buttonElement}</PreviewButton>
-        </div>
+        {miniButtonElement}
       </section>
     </aside>
   )
