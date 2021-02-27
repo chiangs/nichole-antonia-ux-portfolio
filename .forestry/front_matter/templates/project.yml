@@ -36,9 +36,9 @@ fields:
   label: Prototype link
   description: Full link to prototype.
 - name: thumbnail
-  type: text
+  type: file
   config:
-    required: false
+    maxSize: 64
   label: Thumbnail
 pages:
 - projects/nicu-2-you.md
