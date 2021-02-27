@@ -76,6 +76,10 @@
   height: 100%;
 }
 
+.Preview__Mini.Image__Off__Center .Preview__Image img {
+  transform: translateY(-25%);
+}
+
 .Preview__Image > *:first-child {
   height: 100%;
 }

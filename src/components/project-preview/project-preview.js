@@ -11,6 +11,7 @@ const ProjectPreview = ({
   tags,
   hero_image,
   hero_image_alt,
+  offcenter,
   theme,
   body,
   ...props
@@ -19,6 +20,9 @@ const ProjectPreview = ({
     theme === "mini"
       ? [css.Preview__Card, css.Preview__Mini]
       : [css.Preview__Card]
+  const previewImageStyle = !!offcenter
+    ? [css.Image__Off__Center].concat(previewStyle)
+    : previewStyle
   const buttonLabel = "View case study"
 
   const keywordElements = tags.map(k => (
@@ -46,7 +50,7 @@ const ProjectPreview = ({
   )
 
   return (
-    <aside className={previewStyle.join(" ")}>
+    <aside className={previewImageStyle.join(" ")}>
       <section className={css.Preview__Info}>
         <PreviewKeywords>{keywordElements}</PreviewKeywords>
         <PreviewLabel>{titleElement}</PreviewLabel>

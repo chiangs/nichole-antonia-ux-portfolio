@@ -15,10 +15,12 @@ const useProjects = () => {
           frontmatter {
             tags
             title
+            order
             description
             page_link
             prototype_link
             hero_image
+            offcenter
           }
           htmlAst
         }

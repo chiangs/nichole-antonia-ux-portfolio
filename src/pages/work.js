@@ -3,13 +3,14 @@ import { useTransition, animated as a } from "react-spring"
 import css from "../pages-css/work.module.css"
 import { useProjects } from "../hooks"
 import { ProjectPreview, Card, Contact } from "../components"
+import { sortContentBy } from "../services"
 
 const WorkPage = ({ view }) => {
   // Content
   const title = "My work"
   const [mounted, setMounted] = useState(false)
   const projects = useProjects()
-
+  const sortedProjects = sortContentBy(projects, "order")
   // Effects
   useEffect(() => {
     setMounted(true)
@@ -21,7 +22,7 @@ const WorkPage = ({ view }) => {
   })
 
   // Elements
-  const caseStudies = projects.map(p => (
+  const caseStudies = sortedProjects.map(p => (
     <li key={p.title} className={css.Case}>
       <a className={css.Link__Card} href={p.frontmatter.prototype_link}>
         <ProjectPreview {...p.frontmatter} body={p.htmlAst} theme={"default"} />
