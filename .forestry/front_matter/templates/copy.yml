@@ -14,17 +14,6 @@ fields:
     required: false
   label: Title
   description: Title, name or purpose of the copy.
-- name: body
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: html-blocks
-    min: 5
-  label: Body
-  description: Main content; the part of the copy that gets rendered on the site.
 - name: author
   type: text
   config:
