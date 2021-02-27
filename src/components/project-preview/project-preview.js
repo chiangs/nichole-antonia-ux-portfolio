@@ -59,10 +59,14 @@ const ProjectPreview = ({
       </section>
       <section className={css.Preview__Image}>
         <PreviewImage>
-          <img src={hero_image} alt={hero_image_alt} />
+          <div
+            className={css.Preview__Image__Container}
+            style={{ backgroundImage: `url(${hero_image})` }}
+            alt={hero_image_alt}
+          />
         </PreviewImage>
-        {miniButtonElement}
       </section>
+      {miniButtonElement}
     </aside>
   )
 }

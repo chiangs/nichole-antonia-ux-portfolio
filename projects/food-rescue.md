@@ -14,7 +14,6 @@ hero_image: "/splash-food-rescue.jpg"
 hero_image_alt: "Food rescue design"
 hero_image_height: 238
 hero_image_width: 452
-offcenter: true
 gallery: []
 thumbnail: ''
 

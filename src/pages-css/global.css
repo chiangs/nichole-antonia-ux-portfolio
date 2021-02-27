@@ -92,6 +92,12 @@ main {
   flex-wrap: wrap;
 }
 
+@media (max-width: 800px) {
+  :root {
+    --type-scale: 1;
+  }
+}
+
 @media (min-width: 800px) {
   main {
     padding: 0 100px;

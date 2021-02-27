@@ -14,7 +14,6 @@ hero_image: "/splash-nicu.png"
 hero_image_alt: "NICU 2 You design"
 hero_image_height: 238
 hero_image_width: 452
-offcenter: false
 gallery: []
 thumbnail: ''
 

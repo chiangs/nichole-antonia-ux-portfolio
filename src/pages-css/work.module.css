@@ -23,6 +23,11 @@
   text-decoration: none;
 }
 
+.Link__Card:active,
+.Link__Card:visited {
+  color: inherit;
+}
+
 @media (min-width: 1000px) {
   .Work {
     padding: var(--padding-layout-d);

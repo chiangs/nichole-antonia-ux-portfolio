@@ -23,8 +23,12 @@ const WorkPage = ({ view }) => {
 
   // Elements
   const caseStudies = sortedProjects.map(p => (
-    <li key={p.title} className={css.Case}>
-      <a className={css.Link__Card} href={p.frontmatter.prototype_link}>
+    <li key={p.frontmatter.title} className={css.Case}>
+      <a
+        className={css.Link__Card}
+        href={p.frontmatter.prototype_link}
+        target="_blank"
+      >
         <ProjectPreview {...p.frontmatter} body={p.htmlAst} theme={"default"} />
       </a>
     </li>

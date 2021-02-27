@@ -21,6 +21,7 @@ import {
   useMotivations,
   useProjects,
 } from "../hooks"
+import { sortContentBy } from "../services"
 
 const IndexPage = ({ view }) => {
   // Constants
@@ -36,6 +37,7 @@ const IndexPage = ({ view }) => {
   const { testimonialFrontmatter, testimonialAst } = useTestimonial()
   const testimonialCopy = useHast(testimonialAst)
   const projects = useProjects()
+  const projectsSorted = sortContentBy(projects, "order")
 
   const actionPic = "/action-001b.jpg"
   const actionPicAlt = "Nichole Antonia designing prototype at table"
@@ -96,9 +98,13 @@ const IndexPage = ({ view }) => {
     </li>
   ))
 
-  const caseStudies = projects.map(p => (
-    <li key={p.title}>
-      <a className={css.Link__Card} href={p.frontmatter.prototype_link}>
+  const caseStudies = projectsSorted.map(p => (
+    <li key={p.frontmatter.title}>
+      <a
+        className={css.Link__Card}
+        href={p.frontmatter.prototype_link}
+        target="_blank"
+      >
         <ProjectPreview {...p.frontmatter} body={p.htmlAst} theme={"mini"} />
       </a>
     </li>
@@ -121,7 +127,7 @@ const IndexPage = ({ view }) => {
             </div>
             <div className={css.Intro}>
               <div className={css.Intro__Text}>
-                <p className={css.Copy__Intro}>{introCopy}</p>
+                <span className={css.Copy__Intro}>{introCopy}</span>
               </div>
             </div>
           </section>
@@ -180,7 +186,7 @@ const IndexPage = ({ view }) => {
               <Quote className={css.Quote} />
               <div className={css.Intro__Text}>
                 <blockquote className={css.Copy__Intro}>
-                  <p className={css.Testimonial}>{testimonialCopy}</p>
+                  <span className={css.Testimonial}>{testimonialCopy}</span>
                   <section className={css.Testimonial__Author}>
                     <p>{testimonialFrontmatter.author}</p>
                     <p>
