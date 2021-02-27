@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 import css from "../pages-css/work.module.css"
-import { useSiteMetadata } from "../hooks"
+import { useProjects } from "../hooks"
 
 const WorkPage = ({ view }) => {
   // Content
-  const { title } = useSiteMetadata()
+  const title = "My work"
   const [mounted, setMounted] = useState(false)
+  const projects = useProjects()
 
   // Effects
   useEffect(() => {

@@ -19,6 +19,7 @@ import {
   useWorksWith,
   usePersonality,
   useMotivations,
+  useProjects,
 } from "../hooks"
 
 const IndexPage = ({ view }) => {
@@ -34,6 +35,7 @@ const IndexPage = ({ view }) => {
   const introCopy = useHast(introAst)
   const { testimonialFrontmatter, testimonialAst } = useTestimonial()
   const testimonialCopy = useHast(testimonialAst)
+  const projects = useProjects()
 
   const actionPic = "/action-001b.jpg"
   const actionPicAlt = "Nichole Antonia designing prototype at table"
@@ -94,36 +96,36 @@ const IndexPage = ({ view }) => {
     </li>
   ))
 
-  const NICU_2U = {
-    title: "NICU 2 YOU",
-    keywords: ["research", "prototype", "test"],
-    linkExternal: "#",
-    image: {
-      src: "/splash-nicu.png",
-      alt: "NICU 2 You design",
-      dimensions: {
-        height: 238,
-        width: 452,
-      },
-    },
-  }
-  const FOOD_RESCUE = {
-    title: "Food rescue",
-    keywords: ["research", "prototype", "test"],
-    linkExternal: "#",
-    image: {
-      src: "/splash-food-rescue.jpg",
-      alt: "Food rescue design",
-      dimensions: {
-        height: 238,
-        width: 452,
-      },
-    },
-  }
-  const caseStudies = [NICU_2U, FOOD_RESCUE].map(s => (
-    <li key={s.title}>
-      <a className={css.Link__Card} href={s.linkExternal}>
-        <ProjectPreview {...s} theme={"mini"} />
+  //   const NICU_2U = {
+  //     title: "NICU 2 YOU",
+  //     keywords: ["research", "prototype", "test"],
+  //     linkExternal: "#",
+  //     image: {
+  //       src: "/splash-nicu.png",
+  //       alt: "NICU 2 You design",
+  //       dimensions: {
+  //         height: 238,
+  //         width: 452,
+  //       },
+  //     },
+  //   }
+  //   const FOOD_RESCUE = {
+  //     title: "Food rescue",
+  //     keywords: ["research", "prototype", "test"],
+  //     linkExternal: "#",
+  //     image: {
+  //       src: "/splash-food-rescue.jpg",
+  //       alt: "Food rescue design",
+  //       dimensions: {
+  //         height: 238,
+  //         width: 452,
+  //       },
+  //     },
+  //   }
+  const caseStudies = projects.map(p => (
+    <li key={p.title}>
+      <a className={css.Link__Card} href={p.frontmatter.prototype_link}>
+        <ProjectPreview {...p.frontmatter} body={p.htmlAst} theme={"mini"} />
       </a>
     </li>
   ))
