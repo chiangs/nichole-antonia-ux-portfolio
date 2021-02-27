@@ -35,34 +35,11 @@ fields:
     required: false
   label: Prototype link
   description: Full link to prototype.
-- name: duration
-  type: number
-  label: Duration
-  description: Duration of project in number of weeks
-  default: 1
-  required: true
-  config:
-    min: 
-    max: 
-    step: 1
-- name: hero_image
-  type: file
-  config:
-    maxSize: 1
-  description: This is the main photo to be used in previews and hero style sections.
-  label: Cover photo
-- name: gallery
-  type: image_gallery
-  config: {}
-  label: Gallery
-  description: Load photos here that will be used. Then insert them by referencing
-    the gallery.
-- name: linkexternal
+- name: thumbnail
   type: text
   config:
     required: false
-  label: linkExternal
-  description: URL to external location, aka GoogleDrive or Figma
+  label: Thumbnail
 pages:
 - projects/nicu-2-you.md
 - projects/organic-ecommerce-website.md
