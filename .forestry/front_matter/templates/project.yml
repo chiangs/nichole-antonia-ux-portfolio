@@ -66,6 +66,8 @@ fields:
     min: 
     max: 
     step: 
+- name: offcenter
+  type: boolean
+  label: Offcenter
 pages:
 - projects/nicu-2-you.md
-- projects/organic-ecommerce-website.md
