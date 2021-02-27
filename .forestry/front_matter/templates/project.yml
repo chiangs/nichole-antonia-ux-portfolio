@@ -20,6 +20,16 @@ fields:
   label: Tags
   description: Tags, keywords on the tools. Separate by commas when entering. Try
     to keep to 4 or less.
+- name: order
+  type: number
+  label: Order
+  description: The order it will be shown
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 - name: page_link
   type: text
   config:
