@@ -1,4 +1,9 @@
 .Labels {
+  --size-font: var(--small);
+}
+
+.Labels {
+  font-size: var(--size-font);
   width: 100%;
   display: flex;
   justify-content: space-between;

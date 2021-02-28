@@ -1,7 +1,7 @@
 ---
 number_to_show: 4
 list:
-- yoga & meditation
+- yoga
 - crafts
 - hiking
 - reading

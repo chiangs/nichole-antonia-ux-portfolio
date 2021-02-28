@@ -29,6 +29,15 @@ const IndexPage = ({ view }) => {
   const profilePicAlt = "Nichole Antonia profile standing"
   const titleTestimonial = "Testimonial"
   const titleCases = "Latest case studies"
+  const classMotivations = [css.Personality__Item, css.Medium, css.Mint].join(
+    " "
+  )
+  const classPersonality = [css.Personality__Item, css.Large, css.Mint].join(
+    " "
+  )
+  const classHobbies = [css.Personality__Item, css.Small, css.Peach].join(" ")
+
+  //   const classSkills = [css.Personality__Item, css.Skills].join(" ")
   // Content
   const { title } = useSiteMetadata()
   const [mounted, setMounted] = useState(false)
@@ -78,7 +87,7 @@ const IndexPage = ({ view }) => {
     <li key={`work${i}`}>{w}</li>
   ))
   const motivationItems = motivations.skillbar.map(s => (
-    <li key={s.label_1} className="skillbar">
+    <li key={s.label_1} className={css.Skillbar}>
       <SkillBar
         type={"fill"}
         value={s.level}
@@ -88,7 +97,7 @@ const IndexPage = ({ view }) => {
     </li>
   ))
   const personalityItems = personality.skillbar.map(s => (
-    <li key={s.label_1} className="skillbar">
+    <li key={s.label_1} className={css.Skillbar}>
       <SkillBar
         type={"point"}
         value={s.level}
@@ -131,44 +140,94 @@ const IndexPage = ({ view }) => {
               </div>
             </div>
           </section>
-          {/* <section className={css.Index__Section}>
-            <section
-              className={[
-                "wrap",
-                css.About__Section,
-                css.About__Personality,
-              ].join(" ")}
-            >
-              <div className={css.Personality__Container}>
-                <div className={css.List__Headings}>
-                  <p>{motivations.title}</p>
-                  <p>{personality.title}</p>
-                </div>
-                <div className={css.List__Skills}>
+          {/* Skills and Motivations */}
+          <section className={css.Index__Section}>
+            <div className={css.Personality__Container}>
+              {/* Motivations */}
+              <div className={classMotivations}>
+                <span className={css.Motivations}>
+                  <p className={css.Personality__Item__Title}>
+                    {motivations.title}
+                  </p>
                   <ul>{motivationItems}</ul>
+                </span>
+              </div>
+              {/* Personality */}
+              <div className={classPersonality}>
+                <span className={css.Personality}>
+                  <p className={css.Personality__Item__Title}>
+                    {personality.title}
+                  </p>
                   <ul>{personalityItems}</ul>
-                </div>
+                </span>
               </div>
-            </section>
-            <section
-              className={["wrap", css.About__Section, css.About__Uses].join(
-                " "
-              )}
-            >
-              <div className={css.Uses__Container}>
-                <div className={css.List__Headings}>
-                  <p>{worksWith.title}</p>
-                  <p>{hobbies.title}</p>
-                </div>
-                <div className={css.List}>
-                  <div className={css.List__Uses}>
-                    <ul>{worksWithItems}</ul>
-                    <ul>{hobbyListItems}</ul>
-                  </div>
-                </div>
+              {/* Hobbies */}
+              <div className={classHobbies}>
+                <span className={css.Personality}>
+                  <p className={css.Personality__Item__Title}>
+                    {hobbies.title}
+                  </p>
+                  <ul>{hobbyListItems}</ul>
+                </span>
               </div>
-            </section>
-          </section> */}
+              {/* Works with */}
+              <div className={classHobbies}>
+                <span className={css.Personality}>
+                  <p className={css.Personality__Item__Title}>
+                    {worksWith.title}
+                  </p>
+                  <ul>{worksWithItems}</ul>
+                </span>
+              </div>
+              {/* Decorative circles */}
+              <div
+                id="decorative-mint-1"
+                className={[css.Circle__Decorative, css.Small, css.Mint].join(
+                  " "
+                )}
+              ></div>
+              <div
+                id="decorative-mint-2"
+                className={[css.Circle__Decorative, css.Small, css.Mint].join(
+                  " "
+                )}
+              ></div>
+              <div
+                id="decorative-mint-3"
+                className={[css.Circle__Decorative, css.Small, css.Mint].join(
+                  " "
+                )}
+              ></div>
+              <div
+                id="decorative-peach-dark-1"
+                className={[
+                  css.Circle__Decorative,
+                  css.Medium,
+                  css.Peach__Dark,
+                ].join(" ")}
+              ></div>
+              <div
+                id="decorative-peach-dark-2"
+                className={[
+                  css.Circle__Decorative,
+                  css.Medium,
+                  css.Peach__Dark,
+                ].join(" ")}
+              ></div>
+              <div
+                id="decorative-peach-1"
+                className={[css.Circle__Decorative, css.Large, css.Peach].join(
+                  " "
+                )}
+              ></div>
+              <div
+                id="decorative-peach-2"
+                className={[css.Circle__Decorative, css.Large, css.Peach].join(
+                  " "
+                )}
+              ></div>
+            </div>
+          </section>
           {/* Testimonials */}
           <section className={css.Index__Section}>
             <div className={css.Testimonial__Image}>
