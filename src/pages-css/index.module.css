@@ -30,7 +30,8 @@
   --height-line-intro-d: 32px;
   --size-circle-s: 230px;
   --size-circle-m: 300px;
-  --size-circle-l: 320px;
+  --size-circle-m2: 320px;
+  --size-circle-l: 350px;
   --size-circle-dec-s: 24px;
   --size-circle-dec-m: 33px;
   --size-circle-dec-l: 65px;
@@ -157,6 +158,11 @@
   height: var(--size-circle-m);
 }
 
+.Personality__Item.Medium2 {
+  width: var(--size-circle-m2);
+  height: var(--size-circle-m2);
+}
+
 .Personality__Item.Large {
   width: var(--size-circle-l);
   height: var(--size-circle-l);
@@ -173,6 +179,10 @@
 .Personality__Item > * {
   position: absolute;
   width: 45%;
+}
+
+.Personality__Item > .Skills {
+  width: 75%;
 }
 
 .Personality__Item__Title {

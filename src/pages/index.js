@@ -20,6 +20,7 @@ import {
   usePersonality,
   useMotivations,
   useProjects,
+  useSkills,
 } from "../hooks"
 import { sortContentBy } from "../services"
 
@@ -32,10 +33,11 @@ const IndexPage = ({ view }) => {
   const classMotivations = [css.Personality__Item, css.Medium, css.Mint].join(
     " "
   )
-  const classPersonality = [css.Personality__Item, css.Large, css.Mint].join(
+  const classPersonality = [css.Personality__Item, css.Medium2, css.Mint].join(
     " "
   )
   const classHobbies = [css.Personality__Item, css.Small, css.Peach].join(" ")
+  const classSkills = [css.Personality__Item, css.Large, css.Peach].join(" ")
 
   //   const classSkills = [css.Personality__Item, css.Skills].join(" ")
   // Content
@@ -55,6 +57,7 @@ const IndexPage = ({ view }) => {
   const worksWith = useWorksWith()
   const personality = usePersonality()
   const motivations = useMotivations()
+  const skills = useSkills()
   // Dims
   const profilePicDimensions = {
     height: 300,
@@ -106,7 +109,16 @@ const IndexPage = ({ view }) => {
       />
     </li>
   ))
-
+  const skillItems = skills.skillbar.map(s => (
+    <li key={s.label_1} className={css.Skillbar}>
+      <SkillBar
+        type={"dot"}
+        value={s.level}
+        label1={s.label_1}
+        label2={s.label_2}
+      />
+    </li>
+  ))
   const caseStudies = projectsSorted.map(p => (
     <li key={p.frontmatter.title}>
       <a
@@ -177,6 +189,12 @@ const IndexPage = ({ view }) => {
                     {worksWith.title}
                   </p>
                   <ul>{worksWithItems}</ul>
+                </span>
+              </div>
+              <div className={classSkills}>
+                <span className={css.Skills}>
+                  <p className={css.Personality__Item__Title}>{skills.title}</p>
+                  <ul>{skillItems}</ul>
                 </span>
               </div>
               {/* Decorative circles */}

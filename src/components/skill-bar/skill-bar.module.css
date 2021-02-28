@@ -1,5 +1,12 @@
-.Labels {
+.Skillbar__Container {
   --size-font: var(--small);
+}
+
+.Skillbar__Container.Dots {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .Labels {
