@@ -156,7 +156,7 @@ const IndexPage = ({ view }) => {
           <section className={css.Index__Section}>
             <div className={css.Personality__Container}>
               {/* Motivations */}
-              <div className={classMotivations}>
+              <div className={classMotivations} id={css.motivations}>
                 <span className={css.Motivations}>
                   <p className={css.Personality__Item__Title}>
                     {motivations.title}
@@ -165,7 +165,7 @@ const IndexPage = ({ view }) => {
                 </span>
               </div>
               {/* Personality */}
-              <div className={classPersonality}>
+              <div className={classPersonality} id={css.personality}>
                 <span className={css.Personality}>
                   <p className={css.Personality__Item__Title}>
                     {personality.title}
@@ -174,7 +174,7 @@ const IndexPage = ({ view }) => {
                 </span>
               </div>
               {/* Hobbies */}
-              <div className={classHobbies}>
+              <div className={classHobbies} id={css.hobbies}>
                 <span className={css.Personality}>
                   <p className={css.Personality__Item__Title}>
                     {hobbies.title}
@@ -183,7 +183,7 @@ const IndexPage = ({ view }) => {
                 </span>
               </div>
               {/* Works with */}
-              <div className={classHobbies}>
+              <div className={classHobbies} id={css.worksWith}>
                 <span className={css.Personality}>
                   <p className={css.Personality__Item__Title}>
                     {worksWith.title}
@@ -191,7 +191,7 @@ const IndexPage = ({ view }) => {
                   <ul>{worksWithItems}</ul>
                 </span>
               </div>
-              <div className={classSkills}>
+              <div className={classSkills} id={css.skills}>
                 <span className={css.Skills}>
                   <p className={css.Personality__Item__Title}>{skills.title}</p>
                   <ul>{skillItems}</ul>
@@ -199,25 +199,25 @@ const IndexPage = ({ view }) => {
               </div>
               {/* Decorative circles */}
               <div
-                id="decorative-mint-1"
+                id={css.decorativeMint1}
                 className={[css.Circle__Decorative, css.Small, css.Mint].join(
                   " "
                 )}
               ></div>
               <div
-                id="decorative-mint-2"
+                id={css.decorativeMint2}
                 className={[css.Circle__Decorative, css.Small, css.Mint].join(
                   " "
                 )}
               ></div>
               <div
-                id="decorative-mint-3"
+                id={css.decorativeMint3}
                 className={[css.Circle__Decorative, css.Small, css.Mint].join(
                   " "
                 )}
               ></div>
               <div
-                id="decorative-peach-dark-1"
+                id={css.decorativePeachDark1}
                 className={[
                   css.Circle__Decorative,
                   css.Medium,
@@ -225,7 +225,7 @@ const IndexPage = ({ view }) => {
                 ].join(" ")}
               ></div>
               <div
-                id="decorative-peach-dark-2"
+                id={css.decorativePeachDark2}
                 className={[
                   css.Circle__Decorative,
                   css.Medium,
@@ -233,13 +233,13 @@ const IndexPage = ({ view }) => {
                 ].join(" ")}
               ></div>
               <div
-                id="decorative-peach-1"
+                id={css.decorativePeach1}
                 className={[css.Circle__Decorative, css.Large, css.Peach].join(
                   " "
                 )}
               ></div>
               <div
-                id="decorative-peach-2"
+                id={css.decorativePeach2}
                 className={[css.Circle__Decorative, css.Large, css.Peach].join(
                   " "
                 )}

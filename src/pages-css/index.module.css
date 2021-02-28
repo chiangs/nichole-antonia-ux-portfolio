@@ -118,7 +118,7 @@
 
 .Personality__Container {
   width: 100%;
-  height: 100%;
+  height: 800px;
   position: relative;
 }
 
@@ -129,11 +129,9 @@
 .Personality__Item {
   padding: var(--padding-personality);
   border-radius: var(--radius-personality);
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 .Mint {
@@ -170,6 +168,7 @@
 
 .Personality__Item__Title {
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .Skillbar:not(:last-child) {
@@ -177,7 +176,6 @@
 }
 
 .Personality__Item > * {
-  position: absolute;
   width: 45%;
 }
 
@@ -212,6 +210,67 @@
   width: var(--size-circle-dec-l);
   height: var(--size-circle-dec-l);
 }
+
+#motivations {
+  top: 50px;
+  left: 0;
+}
+
+#skills {
+  top: 0;
+  left: 350px;
+}
+
+#worksWith {
+  top: 100px;
+  left: 750px;
+}
+
+#hobbies {
+  top: 320px;
+  left: 225px;
+}
+
+#personality {
+  top: 320px;
+  left: 550px;
+}
+
+#decorativeMint1 {
+  top: 0px;
+  left: 850px;
+}
+
+#decorativeMint2 {
+  top: 500px;
+  left: 150px;
+}
+
+#decorativeMint3 {
+  top: 480px;
+  left: 970px;
+}
+
+#decorativePeach1 {
+  top: 25px;
+  left: 720px;
+}
+
+#decorativePeach2 {
+  top: 430px;
+  left: 0;
+}
+
+#decorativePeachDark1 {
+  top: 560px;
+  left: 100px;
+}
+
+#decorativePeachDark2 {
+  top: 420px;
+  left: 930px;
+}
+
 /* Desktop */
 @media (min-width: 1000px) {
   .Index {
