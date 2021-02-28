@@ -388,24 +388,48 @@
   .Personality__Wrapper {
     height: unset;
   }
+
   .Personality__Container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
-  .Personality__Container > * {
-    flex: 1;
+
+  .Personality__Item:not(:last-child) {
+    margin: 0 0 25px 0;
   }
+
   #motivations,
   #skills,
   #hobbies,
   #personality,
   #worksWith {
+    flex: 1;
     position: relative;
     top: unset;
     left: unset;
     right: unset;
+  }
+
+  #motivations {
+    flex: var(--size-circle-m);
+  }
+
+  #skills {
+    flex: var(--size-circle-l);
+  }
+
+  #hobbies {
+    flex: var(--size-circle-s);
+  }
+
+  #personality {
+    flex: var(--size-circle-m2);
+  }
+
+  #worksWith {
+    flex: var(--size-circle-s);
   }
 }
 
