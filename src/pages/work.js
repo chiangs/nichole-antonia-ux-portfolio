@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 import css from "../pages-css/work.module.css"
 import { useProjects } from "../hooks"
-import { ProjectPreview, Card, Contact } from "../components"
+import { SEO, ProjectPreview, Card, Contact } from "../components"
 import { sortContentBy } from "../services"
 
 const WorkPage = ({ view }) => {
   // Content
   const title = "My work"
+  const description = "Latest projects I am working on."
   const [mounted, setMounted] = useState(false)
   const projects = useProjects()
   const sortedProjects = sortContentBy(projects, "order")
@@ -28,6 +29,7 @@ const WorkPage = ({ view }) => {
         className={css.Link__Card}
         href={p.frontmatter.prototype_link}
         target="_blank"
+        rel="noreferrer"
       >
         <ProjectPreview {...p.frontmatter} body={p.htmlAst} theme={"default"} />
       </a>
@@ -50,7 +52,12 @@ const WorkPage = ({ view }) => {
       )
   )
 
-  return <>{content}</>
+  return (
+    <>
+      <SEO pageTitle={title} pageDescription={description} />
+      {content}
+    </>
+  )
 }
 
 export default WorkPage

@@ -3,7 +3,7 @@ import { useTransition, animated as a } from "react-spring"
 // Internal
 import css from "../pages-css/about.module.css"
 import { useHast, useAbout, useAbout2 } from "../hooks"
-import { Image, Card, Contact } from "../components"
+import { SEO, Image, Card, Contact } from "../components"
 
 const AboutPage = ({ view }) => {
   // State
@@ -11,6 +11,7 @@ const AboutPage = ({ view }) => {
 
   // Content
   const title = "About me"
+  const description = "What you won't see on my CV."
   const aboutCopy1Hast = useAbout()
   const aboutCopy2Hast = useAbout2()
   const aboutCopy1 = useHast(aboutCopy1Hast)
@@ -61,7 +62,12 @@ const AboutPage = ({ view }) => {
       )
   )
 
-  return <>{content}</>
+  return (
+    <>
+      <SEO pageTitle={title} pageDescription={description} />
+      {content}
+    </>
+  )
 }
 
 export default AboutPage

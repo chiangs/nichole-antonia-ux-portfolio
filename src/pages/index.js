@@ -3,6 +3,7 @@ import { useTransition, animated as a } from "react-spring"
 import Quote from "../assets/quote-close.svg"
 import css from "../pages-css/index.module.css"
 import {
+  SEO,
   Brand,
   Image,
   Card,
@@ -41,7 +42,7 @@ const IndexPage = ({ view }) => {
 
   //   const classSkills = [css.Personality__Item, css.Skills].join(" ")
   // Content
-  const { title } = useSiteMetadata()
+  const { title, description } = useSiteMetadata()
   const [mounted, setMounted] = useState(false)
   const introAst = useIntro()
   const introCopy = useHast(introAst)
@@ -66,10 +67,6 @@ const IndexPage = ({ view }) => {
   const actionPicDimensions = {
     height: 300,
     width: 300,
-  }
-  const actionPicDimensions2 = {
-    height: "auto",
-    width: 890,
   }
 
   // Effects
@@ -125,6 +122,7 @@ const IndexPage = ({ view }) => {
         className={css.Link__Card}
         href={p.frontmatter.prototype_link}
         target="_blank"
+        rel="noreferrer"
       >
         <ProjectPreview {...p.frontmatter} body={p.htmlAst} theme={"mini"} />
       </a>
@@ -304,7 +302,12 @@ const IndexPage = ({ view }) => {
       )
   )
 
-  return <>{content}</>
+  return (
+    <>
+      <SEO pageTitle={"Home"} pageDescription={description} />
+      {content}
+    </>
+  )
 }
 
 export default IndexPage

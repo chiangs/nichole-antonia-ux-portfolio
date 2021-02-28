@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useTransition, animated as a } from "react-spring"
 
 import css from "../pages-css/404.module.css"
+import { SEO } from "../components"
 
 const NotFoundPage = () => {
   const title = "404"
@@ -30,7 +31,7 @@ const NotFoundPage = () => {
 
   return (
     <>
-      {/* <SEO pageTitle="404: Not found" /> */}
+      <SEO pageTitle={title} pageDescription={description} />
       {content}
     </>
   )
