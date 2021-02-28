@@ -15,6 +15,7 @@
   --margin-case-d: var(--s) var(--s) var(--s) 0;
   --margin-case-last: var(--s) 0 var(--s) var(--s);
   --margin-section-s: 0 0 150px 0;
+  --margin-section-testimonial-s: 50px 0 225px 0;
   --margin-skills-row: 0 0 var(--s) 0;
   --margin-personality-title: 0 0 var(--xs) 0;
 
@@ -22,7 +23,8 @@
   --padding-layout-d: var(--l3) var(--l) var(--l) var(--l);
   --margin-title-d: 0 0 var(--m) 0;
   --margin-profile-d: 0 50px 0 0;
-  --margin-section-d: 0 0 350px 0;
+  --margin-section-d: 0 0 200px 0;
+  --margin-section-testimonial-d: 50px 0 270px 0;
   --pos-top-intro-d: 70px;
   --pos-left-intro-d: -35px;
   --padding-intro-d: 0 80px 0 0;
@@ -61,6 +63,10 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+
+#testimonials {
+  margin: var(--margin-section-testimonial-s);
 }
 
 .Index__Section:last-child {
@@ -118,7 +124,7 @@
 
 .Personality__Wrapper {
   width: 100%;
-  height: 800px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -443,6 +449,10 @@
     flex-direction: row;
     align-items: flex-start;
     margin: var(--margin-section-d);
+  }
+
+  #testimonials {
+    margin: var(--margin-section-testimonial-d);
   }
 
   .Profile {

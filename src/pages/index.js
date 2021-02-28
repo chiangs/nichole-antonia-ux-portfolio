@@ -253,7 +253,7 @@ const IndexPage = ({ view }) => {
             </div>
           </section>
           {/* Testimonials */}
-          <section className={css.Index__Section}>
+          <section className={css.Index__Section} id={css.testimonials}>
             <div className={css.Testimonial__Image}>
               <Image
                 className={css.About__Image}

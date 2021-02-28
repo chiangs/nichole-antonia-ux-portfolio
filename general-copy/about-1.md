@@ -8,12 +8,12 @@ author: ''
 author_title_and_organization: ''
 
 ---
-After 6 exciting years in the Newborn Intensive Care Unit, I decided it was time to pursue a **new career**. I obviously love working with people but I have also always loved being **creative and solving problems** and that is where UXD came into the picture.
+After 6 exciting years in the Newborn Intensive Care Unit (NICU), I decided it was time to pursue a **new career**. I love working with people but I have also always loved being **creative and solving problems** and that is where UXD came into the picture.
 
 
 
-In March 2021 I graduated from the **User Experience Programme** at Noroff University College. I have learned and developed my skills rapidly during my studies. I have done a lot of hands-on work, for example, conducting user interviews and usability testing. So far I find myself passionate about user research but somehow I get just as caught up and excited when working on the nitty-gritty during the wireframing process.
+In March 2021 I graduated from the **User Experience Programme** at Noroff University College, where I was challenged to learn and develop my skills and knowledge-base rapidly during my studies. It required a lot of hands-on work; conducting user interviews and usability testing, for example. So far I find myself especially passionate about _user research_ but I get just as caught up and excited when working on the nitty-gritty during the wireframing process.
 
 
 
-During my time with Noroff my tutors have praised my diligence and competencies and I have been selected to **mentor newer students** and guide them through their studies.
+During my time with Noroff, my tutors have praised my diligence and competencies and I have been selected to **mentor newer students** and guide them through their studies.
