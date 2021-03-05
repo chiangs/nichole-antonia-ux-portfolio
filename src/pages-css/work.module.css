@@ -1,4 +1,5 @@
 .Work {
+  --color-links: var(--black);
   /* Mobile */
   --padding-layout-s: var(--l3) 0;
   --margin-case-item-s: var(--l) 0;
@@ -21,6 +22,7 @@
 
 .Link__Card {
   text-decoration: none;
+  color: var(--color-links);
 }
 
 .Link__Card:active,
